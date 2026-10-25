@@ -1,4 +1,4 @@
-# Bölüm 002 – 2026.10.26 (Arşiv Dosyası #006–#010)
+# Bölüm 002 – 2026.10.25 (Arşiv Dosyası #006–#010)
 
 ## Seslendirme metni
 
