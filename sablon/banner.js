@@ -12,7 +12,7 @@ function rand(i){const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(
  s+=`<rect x="960" y="560" width="300" height="72" rx="36" fill="#ff4fd8"/><text x="1110" y="606" text-anchor="middle" font-family="${F}" font-weight="bold" font-size="31" fill="#fff">TEKNO ARŞİV</text>`;
  s+=`<text x="960" y="720" font-family="${F}" font-weight="bold" font-size="100" fill="#fff">ADA VOLT</text>`;
  s+=`<text x="960" y="800" font-family="${F}" font-weight="bold" font-size="58" fill="#00f0ff">İLE TEKNOLOJİ</text>`;
- s+=`<text x="960" y="870" font-family="${F}" font-size="34" fill="#c9d4ff">Her gün 19:00'da · 60 saniyede günün teknolojisi</text></svg>`;
+ s+=`<text x="960" y="870" font-family="${F}" font-size="34" fill="#c9d4ff">Her gün 18:00'de · 60 saniyede günün teknolojisi</text></svg>`;
  const ada = await sharp('kanal/ada_cut.png').resize({height:395}).toBuffer();
  const meta = await sharp(ada).metadata();
  await sharp(Buffer.from(s)).composite([{input:ada,left:910-meta.width,top:525}]).png().toFile('kanal/kapak.png');

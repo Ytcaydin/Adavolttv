@@ -3,7 +3,7 @@
 2045'ten 2026'ya bağlanan arşivci **Ada Volt**'un günlük teknoloji haberleri Shorts kanalı (YouTube + Instagram).
 
 - YouTube: @adavoltteknoloji
-- Yayın: her gün 19:00
+- Yayın: her gün 18:00 (YouTube Studio + Meta Business Suite planlayıcı)
 - Kural: **Haberler gerçektir, "2045 notları" kurgudur.**
 
 ## Klasörler
@@ -21,7 +21,7 @@
 1. **Bağlantı** – "BAĞLANTI KURULDU · 2045 → 2026 · ARŞİV KAYDI AÇILIYOR"
 2. **Arşiv Dosyası #NNN** × 5 – gerçek haber (cyan panel) + **2045 NOTU** (mor, ayrı kutu)
 3. **Arşiv Sorgusu** – izleyiciye soru
-4. **Kayıt kapanıyor** – "Bağlantı yarın 19:00'da yeniden açılacak"
+4. **Kayıt kapanıyor** – "Bağlantı yarın 18:00'de yeniden açılacak"
 
 Dosya numaraları kümülatiftir: Bölüm 001 = #001–#005, Bölüm 002 = #006–#010…
 

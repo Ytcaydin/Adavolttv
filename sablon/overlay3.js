@@ -131,7 +131,7 @@ const scenes = {
     let s = `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#0d2a5c" stroke="${C.cy}" stroke-width="3"/>`;
     for (let k = 0; k < 6; k++) { const ph = (k / 6 + lt * 0.12) % 1; const rx = Math.abs(r * Math.cos(ph * Math.PI)); s += `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${r}" fill="none" stroke="${C.cy}" stroke-opacity="0.55" stroke-width="2"/>`; }
     for (let k = -2; k <= 2; k++) { const yy = cy + k * r / 3; const rr = Math.sqrt(r * r - (k * r / 3) ** 2); s += `<ellipse cx="${cx}" cy="${yy}" rx="${rr}" ry="${rr * 0.18}" fill="none" stroke="${C.cy}" stroke-opacity="0.45" stroke-width="2"/>`; }
-    s += T(cx, 616, 44, 'KAYIT KAPANIYOR', { a: 'middle', b: true }) + T(cx, 656, 25, 'BAĞLANTI YARIN 19:00\'DA', { a: 'middle', b: true, c: C.cy }) + T(cx, 688, 25, 'YENİDEN AÇILACAK', { a: 'middle', b: true, c: C.cy });
+    s += T(cx, 616, 44, 'KAYIT KAPANIYOR', { a: 'middle', b: true }) + T(cx, 656, 25, 'BAĞLANTI YARIN 18:00\'DE', { a: 'middle', b: true, c: C.cy }) + T(cx, 688, 25, 'YENİDEN AÇILACAK', { a: 'middle', b: true, c: C.cy });
     const p = 1 + 0.05 * Math.sin(lt * 6), a = ease((lt - 0.8) / 0.4);
     s += `<g opacity="${a}" transform="translate(${cx} 755) scale(${p}) translate(${-cx} -755)"><rect x="${cx - 170}" y="716" width="340" height="78" rx="39" fill="#ff2d55"/>${T(cx, 768, 36, 'ABONE OL', { a: 'middle', b: true })}</g>`;
     return panelFrame(lt, len + 1, 620, s);
