@@ -6,6 +6,7 @@ const SUBS = JSON.parse(fs.readFileSync('subs.json'));
 const ep = JSON.parse(fs.readFileSync(process.env.EP || 'episode.json'));
 const W = 1080, H = 1920, FPS = 30, N = Math.round(TL.total * FPS);
 const F = 'DejaVu Sans', B = TL.bounds;
+const NF = ep.files.length;
 const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
 const ease = x => 1 - Math.pow(1 - clamp(x), 3);
 const back = x => { x = clamp(x); const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
@@ -55,7 +56,7 @@ function panelFrame(lt, len, h, inner) {
 
 const scenes = {
   intro(lt, len) {
-    let s = T(PX + 36, 310, 34, 'BUGÜNÜN', { b: true, c: C.mu }) + T(PX + 36, 380, 64, '5 DOSYASI', { b: true, c: C.cy });
+    let s = T(PX + 36, 310, 34, 'BUGÜNÜN', { b: true, c: C.mu }) + T(PX + 36, 380, 64, `${NF} DOSYASI`, { b: true, c: C.cy });
     ep.files.forEach((f, i) => {
       const a = ease((lt - 0.8 - i * 0.45) / 0.3);
       if (a > 0) s += `<g opacity="${a}">${pill(PX + 36, 420 + i * 82, `0${i + 1}`, C.pk, '#fff', 26)}${T(PX + 130, 456 + i * 82, 32, f, { b: true, max: PW - 150 })}</g>`;
@@ -173,7 +174,7 @@ function genericScene(key) {
   };
 }
 
-if (ep.panels) for (const k of ['n1','n2','n3','n4','n5']) if (ep.panels[k]) scenes[k] = genericScene(k);
+if (ep.panels) for (const k of Object.keys(ep.panels)) if (ep.panels[k]) scenes[k] = genericScene(k);
 const LABEL = { intro: 'BAĞLANTI · 2045', n1: 'ARŞİV DOSYASI ' + fno(0), n2: 'ARŞİV DOSYASI ' + fno(1), n3: 'ARŞİV DOSYASI ' + fno(2), n4: 'ARŞİV DOSYASI ' + fno(3), n5: 'ARŞİV DOSYASI ' + fno(4), soru: 'ARŞİV SORGUSU', outro: 'KAYIT KAPANIYOR' };
 function note2045(sec, lt, len) {
   const lines = ep.notes && ep.notes[sec]; if (!lines) return '';
@@ -215,7 +216,7 @@ function desk(t) {
   let o = `<path d="M-20 1760 L1100 1760 L1100 ${H} L-20 ${H} Z" fill="#0a1238"/><rect x="0" y="1756" width="${W}" height="8" fill="${C.cy}" opacity="0.9"/>`;
   o += `<rect x="0" y="1764" width="${W}" height="40" fill="#141f5c" opacity="0.8"/>`;
   o += T(540, 1795, 26, ep.brand + ' · 2045 ARŞİV YAYINI', { a: 'middle', b: true, c: C.cy, op: 0.85 });
-  const msg = `ARŞİV TARAMASI SÜRÜYOR  •  2045 → 2026 BAĞLANTISI AKTİF  •  BÖLÜM ${ep.episode}  •  DOSYA ${fno(0)} – ${fno(4)}  •  HABERLER GERÇEK, 2045 NOTLARI KURGUDUR  •  `;
+  const msg = `ARŞİV TARAMASI SÜRÜYOR  •  2045 → 2026 BAĞLANTISI AKTİF  •  BÖLÜM ${ep.episode}  •  DOSYA ${fno(0)} – ${fno(NF - 1)}  •  HABERLER GERÇEK, 2045 NOTLARI KURGUDUR  •  `;
   const w = msg.length * 15.5, x = -((t * 120) % w);
   o += `<rect x="0" y="1850" width="${W}" height="56" fill="#000" opacity="0.55"/><rect x="0" y="1850" width="150" height="56" fill="#ff3355"/>` + T(75, 1888, 26, 'CANLI', { a: 'middle', b: true });
   o += `<svg x="150" y="1850" width="${W - 150}" height="56">${T(x, 38, 26, msg + msg + msg, { b: true, c: C.wh })}</svg>`;
@@ -244,7 +245,7 @@ function frame(i) {
   const [s0, s1] = B[sec], lt = t - s0, len = s1 - s0;
   let s = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">`;
   s += `<rect width="${W}" height="200" fill="#000" opacity="0.25"/>`;
-  for (let k = 0; k < 5; k++) { const [a, b] = B['n' + (k + 1)], p = clamp((t - a) / (b - a)); s += `<rect x="${40 + k * 202}" y="34" width="190" height="8" rx="4" fill="#fff" fill-opacity="0.25"/>` + (p > 0 ? `<rect x="${40 + k * 202}" y="34" width="${190 * p}" height="8" rx="4" fill="${C.cy}"/>` : ''); }
+  const SW = (1000 - (NF - 1) * 12) / NF; for (let k = 0; k < NF; k++) { const [a, b] = B['n' + (k + 1)], p = clamp((t - a) / (b - a)); s += `<rect x="${40 + k * (SW + 12)}" y="34" width="${SW}" height="8" rx="4" fill="#fff" fill-opacity="0.25"/>` + (p > 0 ? `<rect x="${40 + k * (SW + 12)}" y="34" width="${SW * p}" height="8" rx="4" fill="${C.cy}"/>` : ''); }
   const la = back((lt) / 0.4);
   s += `<g transform="translate(${-300 * (1 - la)} 0)"><rect x="40" y="70" width="${LABEL[sec].length * 22 + 50}" height="70" rx="16" fill="${C.bg}" fill-opacity="0.9" stroke="${C.cy}" stroke-width="3"/>${T(64, 118, 36, LABEL[sec], { b: true })}</g>`;
   s += infoBar(t);

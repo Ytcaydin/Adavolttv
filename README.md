@@ -16,14 +16,17 @@
 | `kanal/` | Profil fotoğrafı ve kanal kapağı |
 | `bolumler/NNN/` | Her bölümün metadatası, seslendirmesi ve final videosu |
 
-## Bölüm formatı
+## Bölüm formatı (Bölüm 003'ten itibaren)
 
-1. **Bağlantı** – "BAĞLANTI KURULDU · 2045 → 2026 · ARŞİV KAYDI AÇILIYOR"
-2. **Arşiv Dosyası #NNN** × 5 – gerçek haber (cyan panel) + **2045 NOTU** (mor, ayrı kutu)
+Hedef 60–70 sn, seslendirme metni en fazla ~100 kelime.
+
+1. **Bağlantı** – "Bağlantı kuruldu, ben Ada Volt." + tek cümlelik kanca + "İşte bugünün üç dosyası!"
+2. **Arşiv Dosyası #NNN** × 3 – gerçek haber (cyan panel) + **2045 NOTU** (mor, ayrı kutu)
 3. **Arşiv Sorgusu** – izleyiciye soru
 4. **Kayıt kapanıyor** – "Bağlantı yarın 18:00'de yeniden açılacak"
 
-Dosya numaraları kümülatiftir: Bölüm 001 = #001–#005, Bölüm 002 = #006–#010…
+Dosya numaraları kümülatiftir: Bölüm 001 = #001–#005, Bölüm 002 = #006–#010 (eski 5 dosyalı format), Bölüm 003 = #011–#013, sonra her bölüm +3.
+Her bölümün `episode.json` dosyası paneller, 2045 notları, sorgu, sahne arka planları ve kapak metnini taşır; `sablon/overlay4.js` ve `sablon/montage4.py` bunları okur, `sablon/cover.js` kapak görselini üretir.
 
 ## Üretim akışı (v1)
 
