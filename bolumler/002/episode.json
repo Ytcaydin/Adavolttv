@@ -1,8 +1,134 @@
-{"brand":"ADA VOLT","date":"2026.10.26","episode":"002","fileStart":6,
- "files":["OpenAI internetsiz","Block Dessa","Replit → OpenAI","Xbox COO ayrılık","Biyogüvenlik lab."],
- "notes":{"n1":["Bizde buna yapay zekânın","çocukluk dönemi diyoruz."],"n2":["Benim sesim de ilk böyle","bir dizüstünde açılmıştı."],"n3":["Yapay zekâ dünyasındaki bu","transferler hiç bitmedi."],"n4":["Konsol savaşları bizde hâlâ","efsane gibi anlatılır."],"n5":["Bu laboratuvarın adı bizde","ders kitaplarında geçer."]},
- "panels":{"n1":{"tag":"OPENAI","title":"Eğitimde internet yok","stat":"ÇEVRİMDIŞI WEB","rows":[["Kısıtlama","Güvenlik önlemleri tamamlanana kadar"],["Yeni ortam","Web'in önbellekteki kopyası"]]},
-  "n2":{"tag":"BLOCK","title":"Dessa","stat":"YEREL ÇALIŞIR","rows":[["Eğitim verisi","Sadece insan sohbetleri"],["Donanım","MacBook Pro M4 Max ve üstü"]]},
-  "n3":{"tag":"REPLIT","title":"Anthropic → OpenAI","stat":"$100M+ / yıl","rows":[["İndirim","%30'dan fazla (iddia)"],["Kaynak","The Information"]]},
-  "n4":{"tag":"XBOX · MICROSOFT","title":"Helen Chiang","stat":"3 AY","rows":[["Görev","Xbox'un ilk COO'su"],["Microsoft'ta","21 yıl"]]},
-  "n5":{"tag":"İNGİLTERE","title":"AI Biyogüvenlik Lab.","stat":"£100M+","rows":[["Destekçiler","OpenAI, Anthropic, DeepMind"],["Amaç","Yapay zekâ biyoriskleri"]]}}}
+{
+ "brand": "ADA VOLT",
+ "date": "2026.10.26",
+ "episode": "002",
+ "fileStart": 6,
+ "files": [
+  "OpenAI internetsiz",
+  "Block Dessa",
+  "Replit → OpenAI",
+  "Xbox COO ayrılık",
+  "Biyogüvenlik lab."
+ ],
+ "notes": {
+  "n1": [
+   "Bizde buna yapay zekânın",
+   "çocukluk dönemi diyoruz."
+  ],
+  "n2": [
+   "Benim sesim de ilk böyle",
+   "bir dizüstünde açılmıştı."
+  ],
+  "n3": [
+   "Yapay zekâ dünyasındaki bu",
+   "transferler hiç bitmedi."
+  ],
+  "n4": [
+   "Konsol savaşları bizde hâlâ",
+   "efsane gibi anlatılır."
+  ],
+  "n5": [
+   "Bu laboratuvarın adı bizde",
+   "ders kitaplarında geçer."
+  ]
+ },
+ "panels": {
+  "n1": {
+   "tag": "OPENAI",
+   "title": "Eğitimde internet yok",
+   "stat": "ÇEVRİMDIŞI WEB",
+   "rows": [
+    [
+     "Kısıtlama",
+     "Önlemler hazır olana dek"
+    ],
+    [
+     "Yeni ortam",
+     "Web'in önbellekteki kopyası"
+    ]
+   ]
+  },
+  "n2": {
+   "tag": "BLOCK",
+   "title": "Dessa",
+   "stat": "YEREL ÇALIŞIR",
+   "rows": [
+    [
+     "Eğitim verisi",
+     "Sadece insan sohbetleri"
+    ],
+    [
+     "Donanım",
+     "MacBook Pro M4 Max ve üstü"
+    ]
+   ]
+  },
+  "n3": {
+   "tag": "REPLIT",
+   "title": "Anthropic → OpenAI",
+   "stat": "$100M+ / yıl",
+   "rows": [
+    [
+     "İndirim",
+     "%30'dan fazla (iddia)"
+    ],
+    [
+     "Kaynak",
+     "The Information"
+    ]
+   ]
+  },
+  "n4": {
+   "tag": "XBOX · MICROSOFT",
+   "title": "Helen Chiang",
+   "stat": "3 AY",
+   "rows": [
+    [
+     "Görev",
+     "Xbox'un ilk COO'su"
+    ],
+    [
+     "Microsoft'ta",
+     "21 yıl"
+    ]
+   ]
+  },
+  "n5": {
+   "tag": "İNGİLTERE",
+   "title": "AI Biyogüvenlik Lab.",
+   "stat": "£100M+",
+   "rows": [
+    [
+     "Destekçiler",
+     "OpenAI, Anthropic, DeepMind"
+    ],
+    [
+     "Amaç",
+     "Yapay zekâ biyoriskleri"
+    ]
+   ]
+  }
+ },
+ "noteAt": {
+  "n1": 0.717,
+  "n2": 0.718,
+  "n3": 0.697,
+  "n4": 0.747,
+  "n5": 0.769
+ },
+ "question": [
+  "Bilgisayarında internetsiz",
+  "çalışan bir yapay zekâ",
+  "asistanı ister miydin?"
+ ],
+ "scenes": {
+  "intro": "neon",
+  "n1": "sunucu",
+  "n2": "uzay",
+  "n3": "neon",
+  "n4": "sinema",
+  "n5": "lab",
+  "soru": "neon",
+  "outro": "neon"
+ }
+}
