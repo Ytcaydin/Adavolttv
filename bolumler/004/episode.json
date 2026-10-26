@@ -1,10 +1,95 @@
-{"brand":"ADA VOLT","date":"2026.10.27","episode":"004","fileStart":14,
- "files":["Sürücüsüz ayak işi","iTunes geri döndü","Günde 5 milyon $"],
- "notes":{"n1":["Bizde arabalar markette","sıra bekliyor."],"n2":["Nostalji, en sağlam","teknolojimiz."],"n3":["Bizde sunucular","kendini inşa eder."]},
- "question":["Arabanı tek başına","markete gönderir","miydin?"],
- "cover":["ARABAN","SENSİZ MARKETE","GİDECEK!"],
- "scenes":{"intro":"neon","n1":"lab","n2":"sinema","n3":"sunucu","soru":"neon","outro":"neon"},
- "panels":{
-  "n1":{"tag":"GENERAL MOTORS","title":"Kimse olmadan","stat":"0 YOLCU","rows":[["Görev","Market, çamaşırhane"],["Önce","2028: göz kapalı otoyol"]]},
-  "n2":{"tag":"APPLE · iTUNES","title":"iTunes Store","stat":"GERİ DÖNDÜ","rows":[["Kim kullanıyor","Taylor Swift, A. Grande"],["Ne satılıyor","Hayranlara özel ürünler"]]},
-  "n3":{"tag":"VERİ MERKEZİ","title":"Gecikme cezası","stat":"$5M / gün","rows":[["Bu bahar","Günde 1 milyon $"],["Yeni ürün","Gecikme sigortası"]]}}}
+{
+ "brand": "ADA VOLT",
+ "date": "2026.10.27",
+ "episode": "004",
+ "fileStart": 14,
+ "files": [
+  "Sürücüsüz ayak işi",
+  "iTunes geri döndü",
+  "Günde 5 milyon $"
+ ],
+ "notes": {
+  "n1": [
+   "Bizde arabalar markette",
+   "sıra bekliyor."
+  ],
+  "n2": [
+   "Nostalji, en sağlam",
+   "teknolojimiz."
+  ],
+  "n3": [
+   "Bizde sunucular",
+   "kendini inşa eder."
+  ]
+ },
+ "question": [
+  "Arabanı tek başına",
+  "markete gönderir",
+  "miydin?"
+ ],
+ "cover": [
+  "ARABAN",
+  "SENSİZ MARKETE",
+  "GİDECEK!"
+ ],
+ "scenes": {
+  "intro": "neon",
+  "n1": "lab",
+  "n2": "sinema",
+  "n3": "sunucu",
+  "soru": "neon",
+  "outro": "neon"
+ },
+ "panels": {
+  "n1": {
+   "tag": "GENERAL MOTORS",
+   "title": "Kimse olmadan",
+   "stat": "0 YOLCU",
+   "rows": [
+    [
+     "Görev",
+     "Market, çamaşırhane"
+    ],
+    [
+     "Önce",
+     "2028: göz kapalı otoyol"
+    ]
+   ]
+  },
+  "n2": {
+   "tag": "APPLE · iTUNES",
+   "title": "iTunes Store",
+   "stat": "GERİ DÖNDÜ",
+   "rows": [
+    [
+     "Kim kullanıyor",
+     "Taylor Swift, A. Grande"
+    ],
+    [
+     "Ne satılıyor",
+     "Hayranlara özel ürünler"
+    ]
+   ]
+  },
+  "n3": {
+   "tag": "VERİ MERKEZİ",
+   "title": "Gecikme cezası",
+   "stat": "$5M / gün",
+   "rows": [
+    [
+     "Bu bahar",
+     "Günde 1 milyon $"
+    ],
+    [
+     "Yeni ürün",
+     "Gecikme sigortası"
+    ]
+   ]
+  }
+ },
+ "noteAt": {
+  "n1": 0.637,
+  "n2": 0.651,
+  "n3": 0.653
+ }
+}
