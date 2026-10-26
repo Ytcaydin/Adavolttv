@@ -155,7 +155,7 @@ function statFmt(st, lt, at) {
 function genericScene(key) {
   const P = ep.panels[key];
   return (lt, len) => {
-    const news = len * ep.noteAt[key];
+    const news = len * ((ep.noteAt && ep.noteAt[key]) || 0.85);
     const atStat = news * 0.3, atR = [news * 0.5, news * 0.75];
     let s = pill(PX + 36, 262, P.tag, [C.cy, C.ye, C.pk][(+key[1]) % 3], (+key[1]) % 3 === 2 ? '#fff' : '#0a0f2e', 24);
     const tsz = P.title.length > 18 ? 40 : 48;
@@ -178,7 +178,7 @@ if (ep.panels) for (const k of Object.keys(ep.panels)) if (ep.panels[k]) scenes[
 const LABEL = { intro: 'BAĞLANTI · 2045', n1: 'ARŞİV DOSYASI ' + fno(0), n2: 'ARŞİV DOSYASI ' + fno(1), n3: 'ARŞİV DOSYASI ' + fno(2), n4: 'ARŞİV DOSYASI ' + fno(3), n5: 'ARŞİV DOSYASI ' + fno(4), soru: 'ARŞİV SORGUSU', outro: 'KAYIT KAPANIYOR' };
 function note2045(sec, lt, len) {
   const lines = ep.notes && ep.notes[sec]; if (!lines) return '';
-  const at = len * ep.noteAt[sec], a = ease((lt - at) / 0.3) * (1 - clamp((lt - (len - 0.3)) / 0.3));
+  const at = len * ((ep.noteAt && ep.noteAt[sec]) || 0.7), a = ease((lt - at) / 0.3) * (1 - clamp((lt - (len - 0.3)) / 0.3));
   if (a <= 0) return '';
   const g = lt - at < 0.35 ? Math.round(Math.sin(lt * 90) * 8) : 0;
   const y = 230 + (ep.panels ? 560 : ({ n1: 600, n2: 600, n3: 640, n4: 610, n5: 560 })[sec]) + 42;
