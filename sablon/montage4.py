@@ -16,6 +16,7 @@ pattern = {
 }
 os.makedirs('seg3', exist_ok=True)
 for sec, pat in pattern.items():
+    if sec not in SCENE: continue
     for clip, _ in pat:
         f = f'k2/{SCENE[sec]}/{clip}.mp4'
         if not os.path.exists(f):

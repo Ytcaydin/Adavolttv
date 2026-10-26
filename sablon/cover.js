@@ -2,7 +2,7 @@ const sharp = require('/opt/npm-tools/node_modules/sharp');
 const [, , bg, ada, out, ep, l1, l2, l3] = process.argv;
 const W = 1080, H = 1920, F = 'DejaVu Sans';
 const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-const fit = (t, max, s) => Math.min(s, max / (t.length * 0.64));
+const fit = (t, max, s) => Math.min(s, max / (t.length * 0.74));
 (async () => {
   const lines = [l1, l2, l3].filter(Boolean);
   let o = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">`;

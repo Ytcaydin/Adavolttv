@@ -125,7 +125,7 @@ const scenes = {
     s += T(PX + 170, 320, 34, 'ARŞİV', { b: true, c: C.mu }) + T(PX + 170, 366, 44, 'SORGUSU', { b: true, c: C.ye });
     const Q = ep.question || ['Yapay zekânın çektiği', 'bir filme bilet', 'alır mıydın?'];
     Q.forEach((q, k) => { s += T(PX + 36, 460 + k * 50, 36, q, { b: true, c: k === Q.length - 1 ? C.cy : C.wh, max: PW - 72 }); });
-    const a = ease((lt - 5.4) / 0.4);
+    const a = ease((lt - Math.min(5.4, len * 0.75)) / 0.4);
     s += `<g opacity="${a}">${T(PX + 36, 640, 40, 'Yorumlara yaz!', { b: true, i: true, c: C.ye })}<path d="M${PX + 380} ${612 + 10 * Math.abs(Math.sin(lt * 4))} v40 m-14 -14 l14 14 l14 -14" fill="none" stroke="${C.ye}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>`;
     return panelFrame(lt, len, 460, s);
   },
@@ -247,7 +247,7 @@ function frame(i) {
   s += `<rect width="${W}" height="200" fill="#000" opacity="0.25"/>`;
   const SW = (1000 - (NF - 1) * 12) / NF; for (let k = 0; k < NF; k++) { const [a, b] = B['n' + (k + 1)], p = clamp((t - a) / (b - a)); s += `<rect x="${40 + k * (SW + 12)}" y="34" width="${SW}" height="8" rx="4" fill="#fff" fill-opacity="0.25"/>` + (p > 0 ? `<rect x="${40 + k * (SW + 12)}" y="34" width="${SW * p}" height="8" rx="4" fill="${C.cy}"/>` : ''); }
   const la = back((lt) / 0.4);
-  s += `<g transform="translate(${-300 * (1 - la)} 0)"><rect x="40" y="70" width="${LABEL[sec].length * 22 + 50}" height="70" rx="16" fill="${C.bg}" fill-opacity="0.9" stroke="${C.cy}" stroke-width="3"/>${T(64, 118, 36, LABEL[sec], { b: true })}</g>`;
+  s += `<g transform="translate(${-300 * (1 - la)} 0)"><rect x="40" y="70" width="${LABEL[sec].length * 24 + 56}" height="70" rx="16" fill="${C.bg}" fill-opacity="0.9" stroke="${C.cy}" stroke-width="3"/>${T(64, 118, 36, LABEL[sec], { b: true })}</g>`;
   s += infoBar(t);
   s += desk(t);
   if (sec !== 'intro' || lt > 2.6) s += scenes[sec](sec === 'intro' ? lt - 2.6 : lt, sec === 'intro' ? len - 2.6 : len);
