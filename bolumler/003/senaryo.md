@@ -2,28 +2,34 @@
 
 ## Seslendirme metni
 
-**[1 – Kanca / Giriş]**
-MacBook'a dokunmatik ekran geliyor — Apple bunu çarşamba tanıtacak. Bağlantı kuruldu, ben Ada Volt. Bugünün üç dosyası!
+**[1 – Kanca]**
+MacBook'a dokunmatik ekran geliyor — Apple bunu çarşamba tanıtacak.
 
-**[2 – Dosya 011]**
-Arşiv dosyası sıfır on bir. Habere göre Apple, dokunmatik OLED ekranlı MacBook Pro'yu çarşamba tanıtacak.
+**[2 – Kimlik]**
+Bağlantı kuruldu, ben Ada Volt.
+
+**[3 – Ana dosya 011]**
+Arşiv dosyası sıfır on bir. Habere göre bu, ilk dokunmatik MacBook Pro olacak. Ekran Mini LED'den OLED'e geçiyor: daha derin siyahlar, daha güçlü kontrast. Kasa da daha ince ve hafif. Yeni Mac'lerde Em altı çip var, teslimatlar kasımda bekleniyor.
 2045 notu: Ekran silme bezleri o gün zenginleşti.
 
-**[3 – Dosya 012]**
-Arşiv dosyası sıfır on iki. Instagram, Apple TV uygulamasını yayınladı. Reels dev ekranda!
-2045 notu: Bizde kumandaya hâlâ "kaydır" denir.
+**[4 – Hızlı dosya 012]**
+Arşiv dosyası sıfır on iki: Instagram, Apple TV uygulamasını yayınladı; Reels artık dev ekranda.
 
-**[4 – Dosya 013]**
-Arşiv dosyası sıfır on üç. Unitree'nin robot köpeği Go iki'de, on üzerinden dokuz virgül altı puanlık kritik açık bulundu. Güncelleme yayında.
+**[5 – Hızlı dosya 013]**
+Arşiv dosyası sıfır on üç: Yunitri'nin robot köpeği Go Tu'da, on üzerinden dokuz virgül altılık açık bulundu; güncelleme yayında.
 2045 notu: Bizim köpekler şifreyle havlar.
 
-**[5 – Arşiv sorgusu]**
+**[6 – Arşiv sorgusu]**
 Arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? Yorumlara yaz!
 
-**[6 – Kapanış]**
+**[7 – Kapanış]**
 Kayıt kapandı. Bağlantı yarın saat on sekizde yeniden açılacak.
 
+## Telaffuz notları
+- Yunitri → Unitree · Go Tu → Go2 · Em altı → M6
+
 ## Kaynaklar
+- Apple reportedly announcing touchscreen MacBook Pro, OLED iPad mini – 91mobiles (Gurman; ince/hafif kasa, OLED, M6, kasım teslimat): https://www.91mobiles.com/hub/apple-reportedly-announcing-touchscreen-macbook-pro-oled-ipad-mini-october-27th/
 - Apple Reportedly Announcing New MacBook Pro With OLED Touchscreen on Wednesday – MacRumors (Bloomberg/Mark Gurman, 25 Ekim; kaynaklara dayalı haber): https://www.macrumors.com/2026/10/25/macbook-pro-with-touchscreen-on-wednesday/
 - You can now watch Instagram Reels on Apple TV – Digital Trends (25 Ekim): https://www.digitaltrends.com/home-theater/seo-slug-instagram-apple-tv-app-reels/
 - CVE-2026-115995 Unitree Go2 OS command injection (CVSS 9.6, 1.1.11.5 ile düzeltildi) – VulDB (24 Ekim): https://vuldb.com/vuln/426093 · TheHackerWire: https://www.thehackerwire.com/cve-2026-115995-unitree-go2-os-command-injection-remote-critical-compromise-via-chat_go-component/
