@@ -197,15 +197,20 @@ function infoBar(t) {
   return o;
 }
 function connect(t) {
-  if (t > 2.9) return '';
-  const a = 1 - clamp((t - 2.4) / 0.5);
-  let o = `<g opacity="${a}"><rect width="${W}" height="${H}" fill="#020615" opacity="0.88"/>`;
-  for (let k = 0; k < 14; k++) { if (Math.sin(t * 40 + k * 7) > 0.55) o += `<rect x="${(k * 97 + t * 900) % W - 200}" y="${(k * 263) % H}" width="${300 + (k * 53) % 400}" height="${6 + (k % 4) * 6}" fill="${k % 2 ? C.cy : C.pk}" opacity="0.6"/>`; }
-  const dots = '.'.repeat(1 + Math.floor(t * 3) % 3);
-  o += T(540, 860, 66, 'BAĞLANTI KURULDU', { a: 'middle', b: true, c: C.wh });
-  o += T(540, 960, 84, '2045 → 2026', { a: 'middle', b: true, c: C.cy });
-  if (t > 0.9) o += T(540, 1050, 38, 'ARŞİV KAYDI AÇILIYOR' + dots, { a: 'middle', b: true, c: C.ye });
-  return o + '</g>';
+  let o = '';
+  if (t < 1.0) {
+    const a = 1 - clamp((t - 0.6) / 0.4);
+    for (let k = 0; k < 10; k++) { if (Math.sin(t * 40 + k * 7) > 0.4) o += `<rect x="${(k * 97 + t * 900) % W - 200}" y="${(k * 263) % H}" width="${300 + (k * 53) % 400}" height="${6 + (k % 4) * 6}" fill="${k % 2 ? C.cy : C.pk}" opacity="${0.55 * a}"/>`; }
+    o += `<g opacity="${a}"><rect x="290" y="250" width="500" height="64" rx="32" fill="#020615" fill-opacity="0.85" stroke="${C.cy}" stroke-width="3"/>${T(540, 293, 30, 'BAĞLANTI KURULDU · 2045 → 2026', { a: 'middle', b: true, c: C.cy })}</g>`;
+  }
+  const H1 = ep.cover || ep.hookLines;
+  if (H1 && t < 3.4) {
+    const a = ease(t / 0.25) * (1 - clamp((t - 3.0) / 0.4)), sc = back(t / 0.35);
+    o += `<g opacity="${a}" transform="translate(540 1300) scale(${sc}) translate(-540 -1300)"><rect x="40" y="${1300 - H1.length * 62 - 30}" width="1000" height="${H1.length * 124 + 60}" rx="36" fill="#0a0f2e" fill-opacity="0.92" stroke="${C.pk}" stroke-width="5"/>`;
+    H1.forEach((l, i) => { o += T(540, 1300 - H1.length * 62 + 100 + i * 124, 96, l, { a: 'middle', b: true, c: i === H1.length - 1 ? C.ye : C.wh, max: 920 }); });
+    o += '</g>';
+  }
+  return o;
 }
 function hud(t) {
   let o = '';
@@ -250,7 +255,7 @@ function frame(i) {
   s += `<g transform="translate(${-300 * (1 - la)} 0)"><rect x="40" y="70" width="${LABEL[sec].length * 24 + 56}" height="70" rx="16" fill="${C.bg}" fill-opacity="0.9" stroke="${C.cy}" stroke-width="3"/>${T(64, 118, 36, LABEL[sec], { b: true })}</g>`;
   s += infoBar(t);
   s += desk(t);
-  if (sec !== 'intro' || lt > 2.6) s += scenes[sec](sec === 'intro' ? lt - 2.6 : lt, sec === 'intro' ? len - 2.6 : len);
+  if (sec !== 'intro' || lt > 3.2) s += scenes[sec](sec === 'intro' ? lt - 3.2 : lt, sec === 'intro' ? len - 3.2 : len);
   s += note2045(sec, lt, len);
   s += subtitle(t);
   s += hud(t);
