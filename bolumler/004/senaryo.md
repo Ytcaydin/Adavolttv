@@ -2,8 +2,8 @@
 
 ## Seslendirme metni
 
-**[1 – Bağlantı / Giriş]**
-Bağlantı kuruldu, ben Ada Volt. Arabalar sensiz alışverişe gidecek! İşte bugünün üç dosyası!
+**[1 – Kanca / Giriş]**
+Araban yakında markete sensiz gidebilir — GM bunun üzerinde çalışıyor. Bağlantı kuruldu, ben Ada Volt. Bugünün üç dosyası!
 
 **[2 – Dosya 014]**
 Arşiv dosyası sıfır on dört. General Motors, içinde kimse olmadan ayak işlerini yapacak bir araç sistemi üzerinde çalışıyor.

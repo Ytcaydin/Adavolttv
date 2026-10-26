@@ -205,8 +205,9 @@ function connect(t) {
     o += `<g opacity="${a}"><rect x="220" y="250" width="640" height="64" rx="32" fill="#020615" fill-opacity="0.85" stroke="${C.cy}" stroke-width="3"/>${T(540, 293, 30, 'BAĞLANTI KURULDU · 2045 → 2026', { a: 'middle', b: true, c: C.cy })}</g>`;
   }
   const H1 = ep.cover || ep.hookLines;
-  if (H1 && t < 3.4) {
-    const a = ease(t / 0.25) * (1 - clamp((t - 3.0) / 0.4)), sc = back(t / 0.35);
+  const HE = Math.max(3.4, CA + 0.4);
+  if (H1 && t < HE) {
+    const a = ease(t / 0.25) * (1 - clamp((t - (HE - 0.4)) / 0.4)), sc = back(t / 0.35);
     o += `<g opacity="${a}" transform="translate(540 1300) scale(${sc}) translate(-540 -1300)"><rect x="40" y="${1300 - H1.length * 62 - 30}" width="1000" height="${H1.length * 124 + 60}" rx="36" fill="#0a0f2e" fill-opacity="0.92" stroke="${C.pk}" stroke-width="5"/>`;
     H1.forEach((l, i) => { o += T(540, 1300 - H1.length * 62 + 100 + i * 124, 96, l, { a: 'middle', b: true, c: i === H1.length - 1 ? C.ye : C.wh, max: 800 }); });
     o += '</g>';
@@ -256,7 +257,8 @@ function frame(i) {
   s += `<g transform="translate(${-300 * (1 - la)} 0)"><rect x="40" y="70" width="${LABEL[sec].length * 24 + 56}" height="70" rx="16" fill="${C.bg}" fill-opacity="0.9" stroke="${C.cy}" stroke-width="3"/>${T(64, 118, 36, LABEL[sec], { b: true })}</g>`;
   s += infoBar(t);
   s += desk(t);
-  if (sec !== 'intro' || lt > 3.2) s += scenes[sec](sec === 'intro' ? lt - 3.2 : lt, sec === 'intro' ? len - 3.2 : len);
+  const IS = Math.max(3.2, (ep.connectAt !== undefined ? ep.connectAt : 1.8) + 0.2);
+  if (sec !== 'intro' || lt > IS) s += scenes[sec](sec === 'intro' ? lt - IS : lt, sec === 'intro' ? len - IS : len);
   s += note2045(sec, lt, len);
   s += subtitle(t);
   s += hud(t);

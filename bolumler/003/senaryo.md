@@ -2,8 +2,8 @@
 
 ## Seslendirme metni
 
-**[1 – Bağlantı / Giriş]**
-Bağlantı kuruldu, ben Ada Volt. MacBook'lara dokunmatik geliyor! İşte bugünün üç dosyası!
+**[1 – Kanca / Giriş]**
+MacBook'a dokunmatik ekran geliyor — Apple bunu çarşamba tanıtacak. Bağlantı kuruldu, ben Ada Volt. Bugünün üç dosyası!
 
 **[2 – Dosya 011]**
 Arşiv dosyası sıfır on bir. Habere göre Apple, dokunmatik OLED ekranlı MacBook Pro'yu çarşamba tanıtacak.
