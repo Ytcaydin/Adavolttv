@@ -198,8 +198,9 @@ function infoBar(t) {
 }
 function connect(t) {
   let o = '';
-  if (t < 1.0) {
-    const a = 1 - clamp((t - 0.6) / 0.4);
+  const CA = ep.connectAt !== undefined ? ep.connectAt : 1.8;
+  if (t > CA && t < CA + 1.2) {
+    const a = ease((t - CA) / 0.15) * (1 - clamp((t - CA - 0.8) / 0.4));
     for (let k = 0; k < 10; k++) { if (Math.sin(t * 40 + k * 7) > 0.4) o += `<rect x="${(k * 97 + t * 900) % W - 200}" y="${(k * 263) % H}" width="${300 + (k * 53) % 400}" height="${6 + (k % 4) * 6}" fill="${k % 2 ? C.cy : C.pk}" opacity="${0.55 * a}"/>`; }
     o += `<g opacity="${a}"><rect x="220" y="250" width="640" height="64" rx="32" fill="#020615" fill-opacity="0.85" stroke="${C.cy}" stroke-width="3"/>${T(540, 293, 30, 'BAĞLANTI KURULDU · 2045 → 2026', { a: 'middle', b: true, c: C.cy })}</g>`;
   }
