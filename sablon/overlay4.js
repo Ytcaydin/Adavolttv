@@ -56,12 +56,15 @@ function panelFrame(lt, len, h, inner) {
 
 const scenes = {
   intro(lt, len) {
-    let s = T(PX + 36, 310, 34, 'BUGÜNÜN', { b: true, c: C.mu }) + T(PX + 36, 380, 64, `${NF} DOSYASI`, { b: true, c: C.cy });
-    ep.files.forEach((f, i) => {
-      const a = ease((lt - 0.8 - i * 0.45) / 0.3);
-      if (a > 0) s += `<g opacity="${a}">${pill(PX + 36, 420 + i * 82, `0${i + 1}`, C.pk, '#fff', 26)}${T(PX + 130, 456 + i * 82, 32, f, { b: true, max: PW - 150 })}</g>`;
+    // yeni format: önce ana dosya, sonra hızlı dosyalar
+    let s = T(PX + 36, 310, 30, 'ANA DOSYA', { b: true, c: C.mu }) + T(PX + 36, 372, 46, ep.files[0], { b: true, c: C.cy, max: PW - 72 });
+    const a0 = ease((lt - 0.4) / 0.3);
+    if (a0 > 0) s += `<g opacity="${a0}">${T(PX + 36, 446, 26, 'ARDINDAN HIZLI DOSYALAR', { b: true, c: C.mu })}</g>`;
+    ep.files.slice(1).forEach((f, j) => {
+      const a = ease((lt - 0.6 - j * 0.3) / 0.3);
+      if (a > 0) s += `<g opacity="${a}">${pill(PX + 36, 470 + j * 74, fno(j + 1).replace('#', ''), C.pk, '#fff', 24)}${T(PX + 150, 504 + j * 74, 28, f, { b: true, max: PW - 170 })}</g>`;
     });
-    return panelFrame(lt, len, 650, s);
+    return panelFrame(lt, len, 440, s);
   },
   n1(lt, len) {
     let s = pill(PX + 36, 262, 'APPLE', C.cy) + T(PX + 36, 380, 50, 'iPhone Duo', { b: true });
