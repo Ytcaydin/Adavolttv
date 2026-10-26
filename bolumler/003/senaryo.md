@@ -14,19 +14,20 @@ Arşiv dosyası sıfır on bir. Habere göre bu, ilk dokunmatik MacBook Pro olac
 
 **[4 – Hızlı dosya 012]**
 Arşiv dosyası sıfır on iki: Instagram, Apple TV uygulamasını yayınladı; Reels artık dev ekranda.
+2045 notu: Bizde kumandaya hâlâ "kaydır" denir.
 
 **[5 – Hızlı dosya 013]**
-Arşiv dosyası sıfır on üç: Yunitri'nin robot köpeği Go Tu'da, on üzerinden dokuz virgül altılık açık bulundu; güncelleme yayında.
+Arşiv dosyası sıfır on üç: Yunitri'nin robot köpeği Go iki'de, on üzerinden dokuz virgül altılık açık bulundu; güncelleme yayında.
 2045 notu: Bizim köpekler şifreyle havlar.
 
 **[6 – Arşiv sorgusu]**
-Arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? Yorumlara yaz!
+Şimdi arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? Yorumlara yaz!
 
 **[7 – Kapanış]**
 Kayıt kapandı. Bağlantı yarın saat on sekizde yeniden açılacak.
 
 ## Telaffuz notları
-- Yunitri → Unitree · Go Tu → Go2 · Em altı → M6
+- Yunitri → Unitree · Go iki → Go2 · Em altı → M6
 
 ## Kaynaklar
 - Apple reportedly announcing touchscreen MacBook Pro, OLED iPad mini – 91mobiles (Gurman; ince/hafif kasa, OLED, M6, kasım teslimat): https://www.91mobiles.com/hub/apple-reportedly-announcing-touchscreen-macbook-pro-oled-ipad-mini-october-27th/
@@ -45,7 +46,7 @@ Bağlantı kuruldu. Ben Ada Volt, 2045'ten 2026'ya bağlanan bir arşivciyim. Bu
 #013 Unitree Go2 robot köpekte kritik açık (CVSS 9,6) – güncelleme yayında
 
 Haberler gerçektir; 2045 notları kurgudur.
-Arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? Yorumlara yaz!
+Şimdi arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? Yorumlara yaz!
 
 #teknoloji #apple #macbook #teknolojihaberleri #shorts
 
@@ -57,7 +58,7 @@ MacBook'a dokunmatik ekran geliyor! 👆
 #013 Robot köpek Go2'de kritik açık, güncelleme yayında
 
 Haberler gerçektir; 2045 notları kurgudur.
-Arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? 👇
+Şimdi arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? 👇
 
 #teknoloji #apple #macbook #teknolojihaberleri #reels
 

@@ -13,6 +13,10 @@
    "Ekran silme bezleri",
    "o gün zenginleşti."
   ],
+  "n2": [
+   "Bizde kumandaya hâlâ",
+   "\"kaydır\" denir."
+  ],
   "n3": [
    "Bizim köpekler",
    "şifreyle havlar."
@@ -78,6 +82,7 @@
  "connectAt": 4.39,
  "noteAt": {
   "n1": 0.802,
-  "n3": 0.725
+  "n2": 0.656,
+  "n3": 0.722
  }
 }
