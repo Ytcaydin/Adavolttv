@@ -1,0 +1,20 @@
+{
+ "brand": "ADA VOLT",
+ "date": "2026.10.26",
+ "episode": "003",
+ "fileStart": 11,
+ "files": ["Dokunmatik MacBook", "Instagram TV'de", "Robot köpek açığı"],
+ "notes": {
+  "n1": ["Ekran silme bezleri", "o gün zenginleşti."],
+  "n2": ["Bizde kumandaya hâlâ", "\"kaydır\" denir."],
+  "n3": ["Bizim köpekler", "şifreyle havlar."]
+ },
+ "question": ["Dizüstünde", "dokunmatik ekran", "ister misin?"],
+ "cover": ["DOKUNMATİK", "MACBOOK PRO", "ÇARŞAMBA GELİYOR"],
+ "scenes": {"intro": "neon", "n1": "lab", "n2": "sinema", "n3": "sunucu", "soru": "neon", "outro": "neon"},
+ "panels": {
+  "n1": {"tag": "APPLE", "title": "OLED MacBook Pro", "stat": "28 EKİM", "rows": [["Ekran", "14 ve 16 inç dokunmatik"], ["Kaynak", "Bloomberg (Gurman)"]]},
+  "n2": {"tag": "INSTAGRAM", "title": "Apple TV uygulaması", "stat": "tvOS 26+", "rows": [["İçerik", "Reels, uzun video, canlı"], ["Nerede", "Apple TV App Store"]]},
+  "n3": {"tag": "UNITREE · GÜVENLİK", "title": "Go2 robot köpek", "stat": "9,6 / 10", "rows": [["Açık", "Uzaktan komut çalıştırma"], ["Çözüm", "Sürüm 1.1.11.5"]]}
+ }
+}
