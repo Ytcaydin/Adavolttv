@@ -34,9 +34,9 @@ Kayıt kapandı. Bağlantı yarın saat on sekizde yeniden açılacak.
 **Açıklama:**
 Bağlantı kuruldu. Ben Ada Volt, 2045'ten 2026'ya bağlanan bir arşivciyim. Bugünün 3 arşiv dosyası:
 
-#014 GM, içinde kimse olmadan ayak işi yapacak araç sistemi üzerinde çalışıyor
-#015 iTunes Store, yıldızların süper hayran mağazası olarak geri dönüyor
-#016 Veri merkezlerinde geç teslim cezası günde 5 milyon dolar
+📁 014 · GM, içinde kimse olmadan ayak işi yapacak araç sistemi üzerinde çalışıyor
+📁 015 · iTunes Store, yıldızların süper hayran mağazası olarak geri dönüyor
+📁 016 · Veri merkezlerinde geç teslim cezası günde 5 milyon dolar
 
 Haberler gerçektir; "2045 notları" kurgudur.
 Arşiv sorgusu: Arabanı tek başına markete gönderir miydin? Yorumlara yaz!
@@ -46,9 +46,9 @@ Arşiv sorgusu: Arabanı tek başına markete gönderir miydin? Yorumlara yaz!
 ## Instagram
 Araban yakında markete sensiz gidebilir 🚗🛒
 
-#014 GM'den sürücüsüz ayak işi sistemi
-#015 iTunes Store geri dönüyor
-#016 Veri merkezinde gecikmenin bedeli: günde 5 milyon $
+📁 014 · GM'den sürücüsüz ayak işi sistemi
+📁 015 · iTunes Store geri dönüyor
+📁 016 · Veri merkezinde gecikmenin bedeli: günde 5 milyon $
 
 Haberler gerçek, 2045 notları kurgu 😉
 Arşiv sorgusu: Arabanı tek başına markete gönderir miydin? 👇

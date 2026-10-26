@@ -41,9 +41,9 @@ Kayıt kapandı. Bağlantı yarın saat on sekizde yeniden açılacak.
 **Açıklama:**
 Bağlantı kuruldu. Ben Ada Volt, 2045'ten 2026'ya bağlanan bir arşivciyim. Bugünün 3 arşiv dosyası:
 
-#011 Habere göre Apple, dokunmatik OLED MacBook Pro'yu 28 Ekim'de tanıtacak
-#012 Instagram'ın Apple TV uygulaması yayında: Reels artık TV'de
-#013 Unitree Go2 robot köpekte kritik açık (CVSS 9,6) – güncelleme yayında
+📁 011 · Habere göre Apple, dokunmatik OLED MacBook Pro'yu 28 Ekim'de tanıtacak
+📁 012 · Instagram'ın Apple TV uygulaması yayında: Reels artık TV'de
+📁 013 · Unitree Go2 robot köpekte kritik açık (CVSS 9,6) – güncelleme yayında
 
 Haberler gerçektir; 2045 notları kurgudur.
 Şimdi arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? Yorumlara yaz!
@@ -53,9 +53,9 @@ Haberler gerçektir; 2045 notları kurgudur.
 ## Instagram
 MacBook'a dokunmatik ekran geliyor! 👆
 
-#011 Habere göre dokunmatik OLED MacBook Pro çarşamba geliyor
-#012 Instagram artık Apple TV'de: Reels dev ekranda
-#013 Robot köpek Go2'de kritik açık, güncelleme yayında
+📁 011 · Habere göre dokunmatik OLED MacBook Pro çarşamba geliyor
+📁 012 · Instagram artık Apple TV'de: Reels dev ekranda
+📁 013 · Robot köpek Go2'de kritik açık, güncelleme yayında
 
 Haberler gerçektir; 2045 notları kurgudur.
 Şimdi arşiv sorgusu: Dizüstünde dokunmatik ekran ister misin? 👇
