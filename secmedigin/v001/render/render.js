@@ -5,7 +5,7 @@ const { spawn } = require('child_process');
 const W = 1920, H = 1080, FPS = 30;
 const BG = '#0d0f14', AM = '#ffb547', GH = '#7fe3ff', TX = '#f2efe8', MU = '#8b93a7', RD = '#ff5a5f', GR = '#4fd18b', AS = '#2b2f3a';
 const FC = 'DejaVu Sans Condensed', FS = 'DejaVu Serif';
-const SENT = JSON.parse(fs.readFileSync('cumleler.json'));
+const SENT = JSON.parse(fs.readFileSync('cumleler2.json'));
 const DATA = JSON.parse(fs.readFileSync('data.json'));
 const S = i => SENT[i].t0;
 const DUR = 377.4;
@@ -51,11 +51,11 @@ function bg(t) {
   for (const [x, y, r, p] of STARS) o += `<circle cx="${(x + t * 4 * (p + 0.2)) % W}" cy="${y}" r="${r}" fill="${TX}" opacity="${0.06 + 0.08 * Math.abs(Math.sin(t * 0.5 + p * 9))}"/>`;
   return o;
 }
-const CHAP = [['KANCA', 0, ''], ['KURAL', 25.7, 'BABİL\'İN KURALI'], ['2001', S(29), '2001 KRİZİ'], ['SIKICI', S(38), 'SIKICI YILLAR'], ['2013', S(50), '2013: ŞÜPHE'], ['PATLAMA', S(59), 'PATLAMA'], ['YARIŞ', S(69), 'ALTIN MI, MAAŞ MI?'], ['SONUÇ', S(83), 'KASAYI AÇIYORUZ'], ['OBUR', S(94), 'SEÇMEDİĞİN YOLLAR'], ['UYARI', S(105), 'DÜRÜST OLALIM'], ['KAPANIS', S(111), 'SENİN KARARIN']];
+const CHAP = [['KANCA', 0, ''], ['KURAL', S(9) - 0.3, 'BABİL\'İN KURALI'], ['2001', S(29), '2001 KRİZİ'], ['SIKICI', S(38), 'SIKICI YILLAR'], ['2013', S(50), '2013: ŞÜPHE'], ['PATLAMA', S(59), 'PATLAMA'], ['YARIŞ', S(69), 'ALTIN MI, MAAŞ MI?'], ['SONUÇ', S(83), 'KASAYI AÇIYORUZ'], ['OBUR', S(94), 'SEÇMEDİĞİN YOLLAR'], ['UYARI', S(105), 'DÜRÜST OLALIM'], ['KAPANIS', S(111), 'SENİN KARARIN']];
 function header(t) {
-  if (t < 25.5) return '';
+  if (t < S(9) - 0.5) return '';
   let c = CHAP[0]; for (const x of CHAP) if (t >= x[1]) c = x;
-  const a = ease((t - 25.5) / 0.6);
+  const a = ease((t - S(9) + 0.5) / 0.6);
   let o = `<g opacity="${a}">` + T(60, 70, 30, 'SEÇMEDİĞİN', { c: TX, ls: 2 }) + T(272, 70, 30, 'YOL', { c: AM, ls: 2 });
   const ca = ease((t - c[1]) / 0.5);
   if (c[2]) o += `<g opacity="${ca}"><rect x="${W - 60 - c[2].length * 17 - 40}" y="36" width="${c[2].length * 17 + 40}" height="50" rx="25" fill="#141821" stroke="${MU}" stroke-width="2"/>` + T(W - 80, 71, 26, c[2], { a: 'end', c: MU, ls: 1 }) + '</g>';
@@ -70,12 +70,22 @@ const SUBS = [];
     for (const w of words) { if ((cur + ' ' + w).trim().length > 46 && cur) { chunks.push(cur.trim()); cur = w; } else cur += ' ' + w; }
     if (cur.trim()) chunks.push(cur.trim());
     const groups = []; for (let i = 0; i < chunks.length; i += 2) groups.push(chunks.slice(i, i + 2));
-    const tot = groups.reduce((a, g) => a + V(g.join(' ')), 0); let acc = r.t0; const span = r.t1 - r.t0;
-    for (const g of groups) { const d = span * V(g.join(' ')) / tot; SUBS.push([acc, acc + d, g]); acc += d; }
+    const tot = groups.reduce((a, g) => a + V(g.join(' ')), 0); const span = r.t1 - r.t0;
+    let start = r.t0, acc = 0;
+    groups.forEach((g, gi) => {
+      acc += V(g.join(' '));
+      let end = r.t1, next = r.t1;
+      if (gi < groups.length - 1) {
+        const est = r.t0 + span * acc / tot; let best = null;
+        for (const [pa, pz] of (r.pauses || [])) { const d = Math.abs((pa + pz) / 2 - est); if (d < 0.9 && (!best || d < best[0])) best = [d, pa, pz]; }
+        if (best) { end = best[1]; next = best[2]; } else { end = est; next = est; }
+      }
+      SUBS.push([start, end, g]); start = next;
+    });
   }
 })();
 function subtitle(t) {
-  const s = SUBS.find(x => t >= x[0] && t < x[1] + 0.15); if (!s) return '';
+  let s = null; for (let i = 0; i < SUBS.length; i++) { const x = SUBS[i], nx = SUBS[i + 1]; const hold = Math.min(x[1] + 0.4, nx ? nx[0] : x[1] + 0.4); if (t >= x[0] - 0.05 && t < hold) { s = x; break; } } if (!s) return '';
   const lines = s[2]; const w = Math.max(...lines.map(l => l.length)) * 21 + 70; const h = lines.length * 48 + 28;
   const y0 = H - 70 - h;
   let o = `<rect x="${960 - w / 2}" y="${y0}" width="${w}" height="${h}" rx="16" fill="#000" fill-opacity="0.62"/>`;
