@@ -5,10 +5,10 @@ const { spawn } = require('child_process');
 const W = 1920, H = 1080, FPS = 30;
 const BG = '#0d0f14', AM = '#ffb547', GH = '#7fe3ff', TX = '#f2efe8', MU = '#8b93a7', RD = '#ff5a5f', GR = '#4fd18b', AS = '#2b2f3a';
 const FC = 'DejaVu Sans Condensed', FS = 'DejaVu Serif';
-const SENT = JSON.parse(fs.readFileSync('cumleler2.json'));
+const SENT = JSON.parse(fs.readFileSync('cumleler3.json'));
 const DATA = JSON.parse(fs.readFileSync('data.json'));
 const S = i => SENT[i].t0;
-const DUR = 377.4;
+const DUR = 382.06;
 const clamp = x => Math.max(0, Math.min(1, x));
 const ease = x => { x = clamp(x); return 1 - Math.pow(1 - x, 3); };
 const eio = x => { x = clamp(x); return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
@@ -83,6 +83,7 @@ const SUBS = [];
       SUBS.push([start, end, g]); start = next;
     });
   }
+  SUBS.sort((a, b) => a[0] - b[0]);
 })();
 function subtitle(t) {
   let s = null; for (let i = 0; i < SUBS.length; i++) { const x = SUBS[i], nx = SUBS[i + 1]; const hold = Math.min(x[1] + 0.4, nx ? nx[0] : x[1] + 0.4); if (t >= x[0] - 0.05 && t < hold) { s = x; break; } } if (!s) return '';
@@ -242,7 +243,7 @@ add(S(71), S(76) + 0.1, (t, a) => {
   o += `<g opacity="${ease(lt / 0.4)}">${card(160, 220, 760, 620, MU)}${T(540, 300, 44, '2000 · 1 MAAŞ', { a: 'middle', c: MU })}${pile(540, 660, 15, 0.42)}${T(540, 790, 84, '15,2 g', { a: 'middle', c: AM })}</g>`;
   const k = ease((t - S(72)) / 0.5); o += `<g opacity="${k}">${card(1000, 220, 760, 620, MU)}${T(1380, 300, 44, '2026 · 1 MAAŞ', { a: 'middle', c: MU })}${pile(1380, 660, 4, 0.42)}${T(1380, 790, 84, '4,4 g', { a: 'middle', c: GH })}</g>`;
   const e = ease((t - S(73)) / 0.4); o += `<g opacity="${e}">${T(960, 960 - 0, 0, '')}</g>`;
-  const r = ease((t - S(75)) / 0.4); if (r > 0) o += `<g opacity="${r}" transform="translate(960 530) scale(${pop((t - S(75)) / 0.4)})"><circle r="120" fill="${AM}"/>${T(0, 30, 90, '3,5×', { a: 'middle', c: BG })}</g>`;
+  const r = ease((t - S(75)) / 0.4); if (r > 0) o += `<g opacity="${r}" transform="translate(960 530) scale(${pop((t - S(75)) / 0.4)})"><circle r="120" fill="${AM}"/>${T(0, 26, 70, '3,46×', { a: 'middle', c: BG })}</g>`;
   const ae = win(t, S(73), S(75)); if (ae > 0) o += `<g opacity="${ae}">${T(960, 540, 56, t < S(74) ? 'AYNI EMEK' : 'AYNI BİR AY', { a: 'middle', c: TX })}</g>`;
   return `<g opacity="${a}">${o}</g>`;
 });
@@ -250,9 +251,9 @@ add(S(76), S(81) + 0.1, (t, a) => {
   const lt = t - S(76); let o = '';
   const k1 = ease((t - S(77)) / 0.4), k2 = ease((t - S(78)) / 0.4), k3 = ease((t - S(79)) / 0.4), k4 = ease((t - S(80)) / 0.4);
   const c1 = Math.round(1154 * eio((t - S(77)) / 1.5)), c2 = Math.round(333 * eio((t - S(78)) / 1.5));
-  o += `<g opacity="${k1}">${card(200, 260, 680, 360, AM)}${T(540, 340, 40, 'GRAM ALTIN', { a: 'middle', c: MU })}${T(540, 520, 150, '×' + tr(c1), { a: 'middle', c: AM })}</g>`;
-  o += `<g opacity="${k2}">${card(1040, 260, 680, 360, TX)}${T(1380, 340, 40, 'ASGARİ ÜCRET', { a: 'middle', c: MU })}${T(1380, 520, 150, '×' + tr(c2), { a: 'middle' })}</g>`;
-  o += `<g opacity="${k3}">${T(960, 760, 80, 'Altın, maaşı ≈ 3,5 kat geçti', { a: 'middle', c: AM })}</g>`;
+  o += `<g opacity="${k1}">${card(200, 260, 680, 360, AM)}${T(540, 340, 40, 'GRAM ALTIN', { a: 'middle', c: MU })}${T(540, 520, 150, '×' + tr(c1), { a: 'middle', c: AM })}${T(540, 590, 30, '2000 ort. 5,55 TL → bugün 6.402 TL', { a: 'middle', c: MU, n: true })}</g>`;
+  o += `<g opacity="${k2}">${card(1040, 260, 680, 360, TX)}${T(1380, 340, 40, 'ASGARİ ÜCRET', { a: 'middle', c: MU })}${T(1380, 520, 150, '×' + tr(c2), { a: 'middle' })}${T(1380, 590, 30, '2000 ort. 84,2 TL → bugün 28.075 TL', { a: 'middle', c: MU, n: true })}</g>`;
+  o += `<g opacity="${k3}">${T(960, 760, 80, 'Altın, maaşı 3,46 kat geçti', { a: 'middle', c: AM })}</g>`;
   o += `<g opacity="${k4}">${T(960, 860, 56, 'yılda ortalama ≈ %5', { a: 'middle', c: GH, serif: true, it: true })}</g>`;
   return `<g opacity="${a}">${o}</g>`;
 });
@@ -273,10 +274,10 @@ add(S(88), S(93) + 0.1, (t, a) => {
   const k1 = ease((t - S(90)) / 1.5), k2 = ease((t - S(91)) / 2.5);
   o += `<g opacity="${ease((t - S(89)) / 0.4)}">${card(140, 260, 760, 560, TX)}${T(520, 330, 40, 'AYIRDIĞIN', { a: 'middle', c: MU })}${envGrid(250, 400, 32, 12, 0.24, TX, k1)}${T(520, 770, 110, Math.round(32 * k1) + ' MAAŞ', { a: 'middle' })}</g>`;
   o += `<g opacity="${ease((t - S(91)) / 0.4)}">${card(1020, 260, 760, 560, AM)}${T(1400, 330, 40, 'GERİ ALDIĞIN', { a: 'middle', c: MU })}${envGrid(1130, 400, 73, 12, 0.24, AM, k2)}${T(1400, 770, 110, Math.round(73 * k2) + ' MAAŞ', { a: 'middle', c: AM })}</g>`;
-  const k3 = win(t, S(93), S(94) + 0.3); if (k3 > 0) o += `<g opacity="${k3}"><rect x="0" y="120" width="${W}" height="${H - 120}" fill="${BG}" opacity="0.9"/>${T(960, 520, 170, '≈ 6 YIL', { a: 'middle', c: AM })}${T(960, 640, 56, 'çalışmadan yaşayabileceğin kadar', { a: 'middle', serif: true, it: true })}</g>`;
+  const k3 = win(t, S(93), S(112) + 0.2); if (k3 > 0) o += `<g opacity="${k3}"><rect x="0" y="120" width="${W}" height="${H - 120}" fill="${BG}" opacity="0.9"/>${T(960, 520, 170, '≈ 6 YIL', { a: 'middle', c: AM })}${T(960, 640, 56, 'çalışmadan yaşayabileceğin kadar', { a: 'middle', serif: true, it: true })}</g>`;
   return `<g opacity="${a}">${o}</g>`;
 });
-add(S(93), S(94) + 0.3, () => '');
+add(S(112), S(94) - 0.1, (t, a) => { const lt = t - S(112); let o = T(960, 300, 54, 'Yirmi altı yıl sonra…', { a: 'middle', serif: true, it: true, c: MU }) + `<g opacity="${ease((lt - 1.2) / 0.5)}">${T(960, 560, 230, '2052', { a: 'middle', c: GH })}</g>` + `<g opacity="${ease((lt - 3.0) / 0.5)}">${T(960, 720, 56, 'biri senin bugünkü kararını hesaplayacak.', { a: 'middle', serif: true, it: true })}</g>`; return `<g opacity="${a}">${o}</g>`; });
 
 // ÖBÜR YOL
 add(S(94), S(105) + 0.2, (t, a) => {
@@ -293,7 +294,7 @@ add(S(94), S(105) + 0.2, (t, a) => {
 });
 
 // UYARI
-add(S(105), S(111) + 0.1, (t, a) => {
+add(S(105), S(111) - 0.3, (t, a) => {
   let o = card(260, 200, 1400, 680, MU) + T(960, 300, 48, 'DÜRÜST OLALIM', { a: 'middle', c: AM, ls: 4 });
   const items = [['Yatırım tavsiyesi değil, bir düşünce deneyi.', S(106)], ['Geçmiş getiri geleceği garanti etmez.', S(107)], ['Yıllık ortalama fiyat · işçilik ve makas hariç.', S(108)], ['Tüm veriler ve kaynaklar açıklamada.', S(109)]];
   items.forEach(([s, at], i) => { const k = ease((t - at) / 0.4); o += `<g opacity="${k}"><circle cx="360" cy="${410 + i * 110}" r="12" fill="${AM}"/>${T(400, 425 + i * 110, 46, s, { n: true })}</g>`; });
@@ -301,7 +302,7 @@ add(S(105), S(111) + 0.1, (t, a) => {
 });
 
 // KAPANIŞ
-add(S(111), S(113) + 0.1, (t, a) => { let o = T(960, 300, 54, 'BUGÜN ASGARİ ÜCRETİN %10\'U', { a: 'middle', c: MU }) + T(960, 500, 180, '2.807 TL', { a: 'middle', c: AM }); const k = ease((t - S(112)) / 0.5); o += `<g opacity="${k}">${T(960, 700, 70, '2052\'de ne olacak?', { a: 'middle', serif: true, it: true, c: GH })}</g>`; return `<g opacity="${a}">${o}</g>`; });
+add(S(111), S(113) + 0.1, (t, a) => { let o = T(960, 300, 54, 'BUGÜN ASGARİ ÜCRETİN %10\'U', { a: 'middle', c: MU }) + T(960, 500, 180, '2.807 TL', { a: 'middle', c: AM }); return `<g opacity="${a}">${o}</g>`; });
 add(S(113), S(117) + 0.1, (t, a) => {
   let o = T(960, 230, 60, 'Sen olsan %10\'u neye ayırırdın?', { a: 'middle', serif: true, it: true });
   const ops = [['ALTIN', AM], ['DOLAR', GR], ['BORSA', GH], ['FAİZ', TX]];
@@ -312,6 +313,7 @@ add(S(113), S(117) + 0.1, (t, a) => {
 });
 add(S(117), DUR + 1, (t, a) => { const lt = t - S(117); let o = road(960, 640, 0.85) + figure(960, 640 - 170 * 0.85, 0.45, TX, ease(lt / 0.5)); o += `<g opacity="${ease(lt / 0.5)}">${T(960, 760, 70, 'SEÇMEDİĞİN', { a: 'middle' })}${T(960, 840, 70, 'YOL', { a: 'middle', c: AM })}</g>`; o += `<g opacity="${ease((t - S(117)) / 0.5)}">${T(960, 200, 52, 'Her cumartesi bir karar, iki hayat.', { a: 'middle', serif: true, it: true })}</g>`; return `<g opacity="${a}">${o}</g>`; });
 
+add(S(119) - 0.1, SENT[120].t1 + 0.2, (t, a) => { const k = pop((t - S(119)) / 0.4); return `<g opacity="${a}"><rect x="0" y="120" width="${W}" height="${H - 120}" fill="${BG}" opacity="0.85"/>${T(960, 420, 60, 'Kanal yeni.', { a: 'middle', serif: true, it: true })}<g transform="translate(960 600) scale(${k})"><rect x="-260" y="-70" width="520" height="130" rx="65" fill="${RD}"/>${T(0, 22, 64, 'ABONE OL', { a: 'middle' })}</g>${T(960, 780, 40, 'bir sonraki hesabı kaçırma', { a: 'middle', c: MU, serif: true, it: true, op: ease((t - S(120)) / 0.4) })}</g>`; });
 function frameSvg(t) {
   let s = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">` + bg(t);
   s += journey(t);
