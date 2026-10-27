@@ -25,16 +25,16 @@ Not: 2005'te paradan altı sıfır atıldı. 2000'in 82 milyonu, bugünün 82 li
 
 ⏱️ Bölümler
 00:00 Bir karar, 26 yıl
-00:26 Babil'in kuralı
+00:28 Babil'in kuralı
 01:28 2001 krizi
-02:01 Sıkıcı yıllar
-02:32 2013: Şüphe
+02:00 Sıkıcı yıllar
+02:31 2013: Şüphe
 02:57 Patlama
-03:30 Altın mı, maaş mı?
+03:29 Altın mı, maaş mı?
 04:14 Kasayı açıyoruz
 04:53 Seçmediğin yollar
-05:22 Dürüst olalım
-05:50 Senin kararın
+05:27 Dürüst olalım
+05:49 Senin kararın
 
 Seçmediğin Yol — her cumartesi bir karar, iki hayat.
 
