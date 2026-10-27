@@ -1,0 +1,6 @@
+{"duration":26,"music":"neutral",
+"bubbles":[[2.6,5.2,"ada","Bu insanlar neden duvara bağlı?"],[5.4,7.6,"yolcu","Şarjım yüzde üç!"],[7.9,10.6,"ada","Yüzde üç mü?! Telefonunuz bir gün bile dayanmıyor mu?"],[10.9,13.2,"yolcu","Dayanmaz tabii. Sen nereden geldin?"],[13.5,15.8,"ada","Şey... çok uzaktan."]],
+"fact":[16.0,22.2],"factLines":["Telefon pili neden","bir günde biter?","Lityum-iyon pillerin kapasitesi her yıl","sadece birkaç yüzde artıyor. Ekranlar,","işlemciler ve 5G ise her yıl daha","fazla enerji istiyor."],
+"end":22.3,
+"ada":[["konusma",0,7.9],["sasirma",7.9,12.3],["onay",12.3,16.0],["konusma",16.0,22.4],["onay",22.4,26]],
+"sfx":{"whoosh":[0,22.3],"buzz":[0.15],"ding":[24.0]}}
