@@ -1,0 +1,13 @@
+{"duration":34,
+"bubbles":[[0.4,3.0,"ada","Bit, bana bir insan eli çiz."],
+[3.2,6.3,"bit","Tabii ki! İşte kusursuz bir insan eli!"],
+[8.6,10.9,"ada","Bit... kaç parmak var?"],
+[11.1,13.4,"bit","Beş. Bizzat saydım."],
+[17.2,20.0,"bit","...Yedi. Ama ikisi yedek."],
+[20.3,22.9,"ada","2045'te bile aynı hata!"],
+[23.1,25.4,"bit","Kaynak: bana güven."]],
+"bitMoods":[[0,"happy"],[3.2,"proud"],[8.6,"neutral"],[11.1,"proud"],[14.2,"neutral"],[16.0,"sweat"],[23.0,"cool"],[25.5,"happy"]],
+"panel":[6.3,20.2],"drawAt":6.5,"countAt":13.6,
+"fact":[25.6,31.2],
+"factLines":["Yapay zekâ neden","elleri karıştırır?","Fotoğraflarda parmaklar çoğu zaman","birbirini kapatır ve el binlerce","farklı pozda görünür. Model","anatomiyi değil, örüntüyü öğrenir."],
+"end":31.2}
