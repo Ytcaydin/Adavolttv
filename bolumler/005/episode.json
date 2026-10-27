@@ -1,0 +1,82 @@
+{
+ "brand": "ADA VOLT",
+ "date": "2026.10.28",
+ "episode": "005",
+ "fileStart": 17,
+ "files": [
+  "OLED iPad mini",
+  "Anthropic borsada",
+  "Intel'e kuantum"
+ ],
+ "notes": {
+  "n1": [
+   "Bizde tabletler katlanıp",
+   "cüzdana giriyor."
+  ],
+  "n2": [
+   "Bu dosyayı",
+   "iki kez okudum."
+  ],
+  "n3": [
+   "Bizde kuantum,",
+   "cep hesap makinesi."
+  ]
+ },
+ "question": [
+  "Mini bir tablete",
+  "700 dolar",
+  "verir miydin?"
+ ],
+ "cover": [
+  "iPAD MINI'YE",
+  "OLED EKRAN",
+  "GELDİ!"
+ ],
+ "scenes": {
+  "intro": "neon",
+  "n1": "lab",
+  "n2": "neon",
+  "n3": "uzay",
+  "soru": "neon",
+  "outro": "neon"
+ },
+ "panels": {
+  "n1": {
+   "tag": "APPLE · iPAD mini",
+   "title": "8,5 inç OLED",
+   "stat": "699 $",
+   "rows": [
+    [
+     "Çip",
+     "A20 Pro, %60'a dek hızlı"
+    ],
+    [
+     "Satışta",
+     "6 Kasım · IP67"
+    ]
+   ]
+  },
+  "n2": {
+   "tag": "ANTHROPIC · NASDAQ",
+   "title": "Halka arz başvurusu",
+   "stat": "16,3 MLR $",
+   "rows": [
+    [
+     "Hisse kodu",
+     "ANT"
+    ]
+   ]
+  },
+  "n3": {
+   "tag": "INTEL · CLASSIQ",
+   "title": "Kuantum yazılımı",
+   "stat": "2,3 MLR $",
+   "rows": [
+    [
+     "Net bedel",
+     "~2,2 milyar $"
+    ]
+   ]
+  }
+ }
+}
