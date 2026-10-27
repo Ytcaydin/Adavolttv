@@ -1,8 +1,8 @@
 # Video 001 – Yayın metinleri
 
 ## Başlık
-Altın mı Kazandırdı, Maaş mı? 26 Yılın Gerçek Hesabı
-(Yedek: Her Ay Maaşının %10'uyla Altın Alsaydın: 26 Yılın Gerçek Hesabı)
+Aynı Maaş, İki Yol: 26 Yıl Sonra Altında 73 Maaş, TL'de Kaç Maaş?
+(Yedek: Altın mı Kazandırdı, Maaş mı? 26 Yılın Gerçek Hesabı)
 
 ## Açıklama
 2000 yılında maaşının %10'unu her ay altına ayırmaya başlasaydın, bugün elinde ne olurdu? 26 yıl, 322 ay — gerçek verilerle.
