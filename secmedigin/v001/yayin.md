@@ -25,16 +25,16 @@ Not: 2005'te paradan altı sıfır atıldı. 2000'in 82 milyonu, bugünün 82 li
 
 ⏱️ Bölümler
 00:00 Bir karar, 26 yıl
-00:32 Babil'in kuralı
-01:40 2001 krizi
-02:13 Sıkıcı yıllar
-02:47 2013: Şüphe
-03:13 Patlama
-03:51 Altın mı, maaş mı?
-04:44 Kasayı açıyoruz
-05:24 Seçmediğin yollar
-06:02 Dürüst olalım
-06:28 Senin kararın
+00:26 Babil'in kuralı
+01:28 2001 krizi
+02:01 Sıkıcı yıllar
+02:32 2013: Şüphe
+02:57 Patlama
+03:30 Altın mı, maaş mı?
+04:14 Kasayı açıyoruz
+04:53 Seçmediğin yollar
+05:22 Dürüst olalım
+05:50 Senin kararın
 
 Seçmediğin Yol — her cumartesi bir karar, iki hayat.
 
@@ -46,4 +46,4 @@ Aynı %10'u sen neye ayırırdın? 🥇 Altın · 💵 Dolar · 📈 Borsa · �
 
 ## Kapak
 Etiket: 2000'DE BAŞLA · Dev sayı: 73 MAAŞ · İtalik: "26 yıl, ayda %10." · Nesne: altın külçe + maaş zarfı
-(Bölüm zamanları seslendirme gelince kesinleşir.)
+

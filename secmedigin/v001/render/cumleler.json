@@ -1,0 +1,716 @@
+[
+{
+"sec": "KANCA",
+"t0": 0.26,
+"t1": 2.06,
+"text": "İki bin yılında bir karar verdin."
+},
+{
+"sec": "KANCA",
+"t0": 2.06,
+"t1": 7.36,
+"text": "Her ay, maaşının yüzde onunu kenara ayırdın ve o parayla sadece altın aldın."
+},
+{
+"sec": "KANCA",
+"t0": 7.36,
+"t1": 10.3,
+"text": "Yirmi altı yıl boyunca, hiç bırakmadan."
+},
+{
+"sec": "KANCA",
+"t0": 10.3,
+"t1": 13.92,
+"text": "Bugün kasanda yaklaşık iki milyon liralık altın var."
+},
+{
+"sec": "KANCA",
+"t0": 13.92,
+"t1": 15.27,
+"text": "Kulağa çok geliyor, değil mi?"
+},
+{
+"sec": "KANCA",
+"t0": 15.27,
+"t1": 17.64,
+"text": "Ama asıl mesele bu sayı değil."
+},
+{
+"sec": "KANCA",
+"t0": 17.64,
+"t1": 21.68,
+"text": "Çünkü aynı yirmi altı yılda maaşın da büyüdü, fiyatlar da."
+},
+{
+"sec": "KANCA",
+"t0": 21.68,
+"t1": 24.73,
+"text": "Asıl soru şu: altın mı daha hızlı koştu, maaşın mı?"
+},
+{
+"sec": "KANCA",
+"t0": 24.73,
+"t1": 25.71,
+"text": "Bu, Seçmediğin Yol."
+},
+{
+"sec": "KURAL",
+"t0": 25.71,
+"t1": 27.95,
+"text": "Bu fikir yeni değil."
+},
+{
+"sec": "KURAL",
+"t0": 27.95,
+"t1": 29.73,
+"text": "Yüz yıl önce yazılmış bir kitap var:"
+},
+{
+"sec": "KURAL",
+"t0": 29.73,
+"t1": 31.48,
+"text": "Babil'in En Zengin Adamı."
+},
+{
+"sec": "KURAL",
+"t0": 31.48,
+"t1": 39.12,
+"text": "Kitabın ilk kuralı şu: kazandığının onda biri, daha hiçbir şey harcamadan kendine ayrılır."
+},
+{
+"sec": "KURAL",
+"t0": 39.12,
+"t1": 43.1,
+"text": "Kalanın onda yedisiyle yaşarsın, onda ikisiyle borcunu ödersin."
+},
+{
+"sec": "KURAL",
+"t0": 43.1,
+"t1": 47.37,
+"text": "Yani önce harca, kalanı biriktir değil."
+},
+{
+"sec": "KURAL",
+"t0": 47.37,
+"t1": 48.69,
+"text": "Önce biriktir, kalanını harca."
+},
+{
+"sec": "KURAL",
+"t0": 48.69,
+"t1": 52.93,
+"text": "Peki bu kuralı iki bin yılının ocak ayında başlatsaydın?"
+},
+{
+"sec": "KURAL",
+"t0": 52.93,
+"t1": 58.57,
+"text": "Bunun için iki sayıya ihtiyacımız var: her ayın maaşı ve her yılın altın fiyatı."
+},
+{
+"sec": "KURAL",
+"t0": 58.57,
+"t1": 60.74,
+"text": "İkisini de gerçek veriden alıyorum."
+},
+{
+"sec": "KURAL",
+"t0": 60.74,
+"t1": 62.18,
+"text": "Ocak iki bin."
+},
+{
+"sec": "KURAL",
+"t0": 62.18,
+"t1": 65.6,
+"text": "Net asgari ücret: seksen iki milyon dört yüz bin lira."
+},
+{
+"sec": "KURAL",
+"t0": 65.6,
+"t1": 66.98,
+"text": "Evet, milyon."
+},
+{
+"sec": "KURAL",
+"t0": 66.98,
+"t1": 72.25,
+"text": "Bunu aklının bir köşesinde tut, çünkü iki bin beşte paradan altı sıfır atılacak."
+},
+{
+"sec": "KURAL",
+"t0": 72.25,
+"t1": 75.48,
+"text": "O günün seksen iki milyonu, bugünün seksen iki lirası."
+},
+{
+"sec": "KURAL",
+"t0": 75.48,
+"t1": 78.84,
+"text": "Maaşının yüzde onu, sekiz lira yirmi dört kuruş."
+},
+{
+"sec": "KURAL",
+"t0": 78.84,
+"t1": 82.72,
+"text": "O yıl gram altın ortalama beş lira elli beş kuruş."
+},
+{
+"sec": "KURAL",
+"t0": 82.72,
+"t1": 85.41,
+"text": "Yani ilk ay bir buçuk gram bile alamıyorsun."
+},
+{
+"sec": "KURAL",
+"t0": 85.41,
+"t1": 86.94,
+"text": "Ama sen kararını verdin."
+},
+{
+"sec": "KURAL",
+"t0": 86.94,
+"t1": 88.28,
+"text": "Kuyumcuya gidiyorsun."
+},
+{
+"sec": "2001",
+"t0": 88.28,
+"t1": 91.66,
+"text": "İlk yılın sonunda kasanda on sekiz gram altın var."
+},
+{
+"sec": "2001",
+"t0": 91.66,
+"t1": 93.97,
+"text": "Sonra şubat iki bin bir geliyor."
+},
+{
+"sec": "2001",
+"t0": 93.97,
+"t1": 97.12,
+"text": "Türkiye'nin en ağır ekonomik krizlerinden biri."
+},
+{
+"sec": "2001",
+"t0": 97.12,
+"t1": 101.34,
+"text": "Kur bir gecede serbest bırakılıyor, dolar uçuyor, bankalar batıyor."
+},
+{
+"sec": "2001",
+"t0": 101.34,
+"t1": 105.01,
+"text": "Etrafındaki herkes aynı şeyi söylüyor: elindekini sat."
+},
+{
+"sec": "2001",
+"t0": 105.01,
+"t1": 106.34,
+"text": "Sen satmıyorsun."
+},
+{
+"sec": "2001",
+"t0": 106.34,
+"t1": 109.9,
+"text": "O yıl altının ortalama fiyatı neredeyse ikiye katlanıyor."
+},
+{
+"sec": "2001",
+"t0": 109.9,
+"t1": 116.35,
+"text": "Ama maaşının yüzde onuyla artık eskisinin ancak üçte ikisi kadar gram alabiliyorsun."
+},
+{
+"sec": "2001",
+"t0": 116.35,
+"t1": 120.51,
+"text": "İlk dersin bu: kriz kasandakini büyütür, ama cebindekini küçültür."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 120.51,
+"t1": 121.97,
+"text": "İki bin beş."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 121.97,
+"t1": 124.05,
+"text": "Paradan altı sıfır atılıyor."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 124.05,
+"t1": 128.07,
+"text": "Maaşın artık üç yüz elli lira, ayırdığın pay otuz beş lira."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 128.07,
+"t1": 129.87,
+"text": "Bu yıllar sıkıcı."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 129.87,
+"t1": 133.26,
+"text": "Her ay aynı kuyumcu, aynı küçük paket."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 133.26,
+"t1": 136.4,
+"text": "Arkadaşların araba alıyor, tatile gidiyor."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 136.4,
+"t1": 138.34,
+"text": "Sen hâlâ yüzde onu ayırıyorsun."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 138.34,
+"t1": 140.15,
+"text": "İki bin sekiz."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 140.15,
+"t1": 142.0,
+"text": "Dünya finans krizine giriyor."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 142.0,
+"t1": 144.22,
+"text": "Kasanda yüz elli bir gram var."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 144.22,
+"t1": 149.56,
+"text": "O güne kadar cebinden üç bin lira çıktı, altınlarının değeri beş bin beş yüz lira."
+},
+{
+"sec": "SIKICI YILLAR",
+"t0": 149.56,
+"t1": 151.78,
+"text": "İyi, ama efsane değil."
+},
+{
+"sec": "2013",
+"t0": 151.78,
+"t1": 156.45,
+"text": "Sonra iki bin on üç geliyor ve ilk kez gerçekten şüpheye düşüyorsun."
+},
+{
+"sec": "2013",
+"t0": 156.45,
+"t1": 158.66,
+"text": "Altın dünyada sert düşüyor."
+},
+{
+"sec": "2013",
+"t0": 158.66,
+"t1": 161.7,
+"text": "Türkiye'de gram altının yıllık ortalaması geriliyor."
+},
+{
+"sec": "2013",
+"t0": 161.7,
+"t1": 165.21,
+"text": "Haberlerde herkes altın devrinin bittiğini konuşuyor."
+},
+{
+"sec": "2013",
+"t0": 165.21,
+"t1": 167.18,
+"text": "Burada çoğu insan bırakır."
+},
+{
+"sec": "2013",
+"t0": 167.18,
+"t1": 169.7,
+"text": "Seçmediğin yol tam olarak burada ayrılıyor."
+},
+{
+"sec": "2013",
+"t0": 169.7,
+"t1": 173.96,
+"text": "Çünkü bırakan kişi, hikâyenin en önemli kısmını hiç görmüyor."
+},
+{
+"sec": "2013",
+"t0": 173.96,
+"t1": 175.19,
+"text": "Sen bırakmıyorsun."
+},
+{
+"sec": "2013",
+"t0": 175.19,
+"t1": 177.12,
+"text": "Kasanda iki yüz beş gram var."
+},
+{
+"sec": "PATLAMA",
+"t0": 177.12,
+"t1": 179.72,
+"text": "İki bin on sekiz, ağustos."
+},
+{
+"sec": "PATLAMA",
+"t0": 179.72,
+"t1": 180.68,
+"text": "Kur şoku."
+},
+{
+"sec": "PATLAMA",
+"t0": 180.68,
+"t1": 183.33,
+"text": "Altınlarının değeri elli bin lirayı geçiyor."
+},
+{
+"sec": "PATLAMA",
+"t0": 183.33,
+"t1": 185.05,
+"text": "İki bin yirmi bir."
+},
+{
+"sec": "PATLAMA",
+"t0": 185.05,
+"t1": 189.34,
+"text": "Kasanda iki yüz seksen altı gram, değeri yüz kırk yedi bin lira."
+},
+{
+"sec": "PATLAMA",
+"t0": 189.34,
+"t1": 191.42,
+"text": "Ve sonra son dört yıl."
+},
+{
+"sec": "PATLAMA",
+"t0": 191.42,
+"t1": 200.61,
+"text": "Gram altının ortalaması iki bin yirmi ikide dokuz yüz elli lira, iki bin yirmi dörtte iki bin beş yüz, iki bin yirmi beşte dört bin dört yüz."
+},
+{
+"sec": "PATLAMA",
+"t0": 200.61,
+"t1": 203.92,
+"text": "Bugün ise altı bin dört yüz liranın üzerinde."
+},
+{
+"sec": "PATLAMA",
+"t0": 203.92,
+"t1": 206.07,
+"text": "Senin yaptığın şey hiç değişmedi."
+},
+{
+"sec": "PATLAMA",
+"t0": 206.07,
+"t1": 209.61,
+"text": "Değişen, zamanın senin için çalışması oldu."
+},
+{
+"sec": "YARIŞ",
+"t0": 209.61,
+"t1": 215.39,
+"text": "Şimdi en başta sorduğumuz soruya dönelim: altın mı daha hızlı koştu, maaşın mı?"
+},
+{
+"sec": "YARIŞ",
+"t0": 215.39,
+"t1": 217.63,
+"text": "Bunu tek bir görüntüyle anlatayım."
+},
+{
+"sec": "YARIŞ",
+"t0": 217.63,
+"t1": 222.82,
+"text": "İki bin yılında bir aylık asgari ücret, ortalama on beş gram altın alıyordu."
+},
+{
+"sec": "YARIŞ",
+"t0": 222.82,
+"t1": 227.42,
+"text": "Bugün bir aylık asgari ücret, dört gramdan biraz fazla altın alıyor."
+},
+{
+"sec": "YARIŞ",
+"t0": 227.42,
+"t1": 228.7,
+"text": "Aynı emek."
+},
+{
+"sec": "YARIŞ",
+"t0": 228.7,
+"t1": 229.96,
+"text": "Aynı bir ay."
+},
+{
+"sec": "YARIŞ",
+"t0": 229.96,
+"t1": 233.95,
+"text": "Ama yirmi altı yıl önce üç buçuk kat daha fazla altın ediyordu."
+},
+{
+"sec": "YARIŞ",
+"t0": 233.95,
+"t1": 235.34,
+"text": "Rakamla söyleyeyim."
+},
+{
+"sec": "YARIŞ",
+"t0": 235.34,
+"t1": 238.79,
+"text": "Bu sürede gram altın bin yüz kattan fazla arttı."
+},
+{
+"sec": "YARIŞ",
+"t0": 238.79,
+"t1": 241.35,
+"text": "Asgari ücret ise üç yüz otuz kat."
+},
+{
+"sec": "YARIŞ",
+"t0": 241.35,
+"t1": 245.46,
+"text": "Yani altın, maaşı yaklaşık üç buçuk kat geride bıraktı."
+},
+{
+"sec": "YARIŞ",
+"t0": 245.46,
+"t1": 248.28,
+"text": "Bu, yılda ortalama yüzde beşe yakın bir fark demek."
+},
+{
+"sec": "YARIŞ",
+"t0": 248.28,
+"t1": 249.58,
+"text": "Müthiş bir fark değil."
+},
+{
+"sec": "YARIŞ",
+"t0": 249.58,
+"t1": 254.4,
+"text": "Ama \"altın sadece enflasyona karşı korur\" diyenlerin söylediğinden daha iyi."
+},
+{
+"sec": "SONUÇ",
+"t0": 254.4,
+"t1": 256.88,
+"text": "Ekim, iki bin yirmi altı."
+},
+{
+"sec": "SONUÇ",
+"t0": 256.88,
+"t1": 260.33,
+"text": "Yirmi altı yıl, üç yüz yirmi iki ay."
+},
+{
+"sec": "SONUÇ",
+"t0": 260.33,
+"t1": 262.01,
+"text": "Kasanı açıyorsun."
+},
+{
+"sec": "SONUÇ",
+"t0": 262.01,
+"t1": 265.09,
+"text": "İçinde üç yüz on sekiz gram altın var."
+},
+{
+"sec": "SONUÇ",
+"t0": 265.09,
+"t1": 269.33,
+"text": "Bugünkü fiyatla değeri yaklaşık iki milyon kırk bin lira."
+},
+{
+"sec": "SONUÇ",
+"t0": 269.33,
+"t1": 274.33,
+"text": "Ama lira sürekli değer kaybettiği için asıl hesabı asgari ücretle yapalım."
+},
+{
+"sec": "SONUÇ",
+"t0": 274.33,
+"t1": 277.56,
+"text": "Yirmi altı yıl boyunca her ay yüzde on ayırdın."
+},
+{
+"sec": "SONUÇ",
+"t0": 277.56,
+"t1": 280.33,
+"text": "Bu, toplamda otuz iki maaş eder."
+},
+{
+"sec": "SONUÇ",
+"t0": 280.33,
+"t1": 285.19,
+"text": "Bugün elindeki altın ise yaklaşık yetmiş üç asgari ücrete denk."
+},
+{
+"sec": "SONUÇ",
+"t0": 285.19,
+"t1": 289.8,
+"text": "Yani otuz iki maaş ayırdın, yetmiş üç maaş geri aldın."
+},
+{
+"sec": "SONUÇ",
+"t0": 289.8,
+"t1": 292.98,
+"text": "Altı yıl çalışmadan yaşayabileceğin kadar."
+},
+{
+"sec": "OBUR YOL",
+"t0": 292.98,
+"t1": 295.56,
+"text": "Peki seçmediğin yol neydi?"
+},
+{
+"sec": "OBUR YOL",
+"t0": 295.56,
+"t1": 298.38,
+"text": "Birinci yol: o yüzde onu her ay harcadın."
+},
+{
+"sec": "OBUR YOL",
+"t0": 298.38,
+"t1": 301.06,
+"text": "Bir yemek, bir kıyafet, bir hafta sonu."
+},
+{
+"sec": "OBUR YOL",
+"t0": 301.06,
+"t1": 303.12,
+"text": "Bugün elinde hiçbir şey yok."
+},
+{
+"sec": "OBUR YOL",
+"t0": 303.12,
+"t1": 305.86,
+"text": "Ve dürüst olalım, çoğumuz bu yoldayız."
+},
+{
+"sec": "OBUR YOL",
+"t0": 305.86,
+"t1": 311.52,
+"text": "İkinci yol: yüzde onu ayırdın ama altına değil, yastık altına, Türk lirası olarak koydun."
+},
+{
+"sec": "OBUR YOL",
+"t0": 311.52,
+"t1": 314.73,
+"text": "Yirmi altı yılda yüz on beş bin lira biriktirdin."
+},
+{
+"sec": "OBUR YOL",
+"t0": 314.73,
+"t1": 317.9,
+"text": "Bugün bu para ancak dört asgari ücret ediyor."
+},
+{
+"sec": "OBUR YOL",
+"t0": 317.9,
+"t1": 319.46,
+"text": "Aynı disiplin, aynı fedakârlık."
+},
+{
+"sec": "OBUR YOL",
+"t0": 319.46,
+"t1": 320.86,
+"text": "Biri yetmiş üç maaş, diğeri dört maaş."
+},
+{
+"sec": "OBUR YOL",
+"t0": 320.86,
+"t1": 322.44,
+"text": "Arada tek bir karar var: paranı neyde tuttuğun."
+},
+{
+"sec": "UYARI",
+"t0": 322.44,
+"t1": 323.68,
+"text": "Şimdi dürüst olalım."
+},
+{
+"sec": "UYARI",
+"t0": 323.68,
+"t1": 327.26,
+"text": "Bu bir yatırım tavsiyesi değil, bir düşünce deneyi."
+},
+{
+"sec": "UYARI",
+"t0": 327.26,
+"t1": 333.96,
+"text": "Bu hesap geçmişe bakıyor; altın yıllarca düştüğü dönemler de yaşadı ve gelecekte aynısını yapmak zorunda değil."
+},
+{
+"sec": "UYARI",
+"t0": 333.96,
+"t1": 341.32,
+"text": "Hesaplar yıllık ortalama fiyatlarla yapıldı; kuyumcu işçiliği ve alış satış farkı dahil değil."
+},
+{
+"sec": "UYARI",
+"t0": 341.32,
+"t1": 347.89,
+"text": "Bu videodaki bütün sayılar, kaynaklarıyla birlikte açıklamada duruyor."
+},
+{
+"sec": "UYARI",
+"t0": 347.89,
+"t1": 350.08,
+"text": "İstersen durdur ve kendin kontrol et."
+},
+{
+"sec": "KAPANIŞ",
+"t0": 350.08,
+"t1": 353.77,
+"text": "Bugün asgari ücretin yüzde onu, iki bin sekiz yüz yedi lira."
+},
+{
+"sec": "KAPANIŞ",
+"t0": 353.77,
+"t1": 359.92,
+"text": "Yirmi altı yıl sonra, iki bin elli ikide, biri bu videoyu izleyip senin bugünkü kararını hesaplayacak."
+},
+{
+"sec": "KAPANIŞ",
+"t0": 359.92,
+"t1": 363.99,
+"text": "Peki aynı yüzde onu altına değil, başka bir şeye koysaydın?"
+},
+{
+"sec": "KAPANIŞ",
+"t0": 363.99,
+"t1": 365.58,
+"text": "Dolar, borsa, ya da bankada faiz?"
+},
+{
+"sec": "KAPANIŞ",
+"t0": 365.58,
+"t1": 367.21,
+"text": "Yorumlara yaz."
+},
+{
+"sec": "KAPANIŞ",
+"t0": 367.21,
+"t1": 372.34,
+"text": "En çok seçilen yolu bir sonraki videoda aynı hesapla karşına koyacağım."
+},
+{
+"sec": "KAPANIŞ",
+"t0": 372.34,
+"t1": 374.65,
+"text": "Her cumartesi bir karar, iki hayat."
+},
+{
+"sec": "KAPANIŞ",
+"t0": 374.65,
+"t1": 377.09,
+"text": "Seçmediğin yol, sadece bir karar uzağında."
+}
+]
