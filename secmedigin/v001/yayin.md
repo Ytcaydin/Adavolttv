@@ -1,7 +1,8 @@
 # Video 001 – Yayın metinleri
 
 ## Başlık
-2000'den Beri Maaşının %10'unu Altına Ayırsaydın Ne Olurdu? 26 Yılın Gerçek Hesabı
+Altın mı Kazandırdı, Maaş mı? 26 Yılın Gerçek Hesabı
+(Yedek: Her Ay Maaşının %10'uyla Altın Alsaydın: 26 Yılın Gerçek Hesabı)
 
 ## Açıklama
 2000 yılında maaşının %10'unu her ay altına ayırmaya başlasaydın, bugün elinde ne olurdu? 26 yıl, 322 ay — gerçek verilerle.
