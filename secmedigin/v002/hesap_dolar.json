@@ -1,0 +1,181 @@
+{
+ "ay": 322,
+ "toplam_usd": 10904,
+ "odenen_tl": 115770,
+ "odenen_maas": 4.1,
+ "bugun_tl": 542877,
+ "kac_maas": 19.3,
+ "altin_tl": 2041018,
+ "altin_maas": 72.7,
+ "tl_maas": 4.1,
+ "maas2000_usd": 135.0,
+ "maas_bugun_usd": 563.9,
+ "dolar_kat": 80,
+ "maas_kat": 333,
+ "ilk_ay_usd": 13.21,
+ "bugun_ayrilan_usd": 56.4,
+ "yil": {
+  "2000": {
+   "usd": 162,
+   "odenen": 101,
+   "deger_tl": 101,
+   "maas": 1.2
+  },
+  "2001": {
+   "usd": 271,
+   "odenen": 234,
+   "deger_tl": 332,
+   "maas": 2.7
+  },
+  "2002": {
+   "usd": 409,
+   "odenen": 443,
+   "deger_tl": 616,
+   "maas": 3.3
+  },
+  "2003": {
+   "usd": 591,
+   "odenen": 714,
+   "deger_tl": 882,
+   "maas": 3.9
+  },
+  "2004": {
+   "usd": 853,
+   "odenen": 1087,
+   "deger_tl": 1213,
+   "maas": 3.8
+  },
+  "2005": {
+   "usd": 1166,
+   "odenen": 1507,
+   "deger_tl": 1564,
+   "maas": 4.5
+  },
+  "2006": {
+   "usd": 1485,
+   "odenen": 1964,
+   "deger_tl": 2126,
+   "maas": 5.6
+  },
+  "2007": {
+   "usd": 1864,
+   "odenen": 2457,
+   "deger_tl": 2427,
+   "maas": 5.8
+  },
+  "2008": {
+   "usd": 2322,
+   "odenen": 3048,
+   "deger_tl": 3001,
+   "maas": 6.0
+  },
+  "2009": {
+   "usd": 2738,
+   "odenen": 3692,
+   "deger_tl": 4236,
+   "maas": 7.8
+  },
+  "2010": {
+   "usd": 3208,
+   "odenen": 4397,
+   "deger_tl": 4813,
+   "maas": 8.0
+  },
+  "2011": {
+   "usd": 3671,
+   "odenen": 5171,
+   "deger_tl": 6131,
+   "maas": 9.3
+  },
+  "2012": {
+   "usd": 4153,
+   "odenen": 6035,
+   "deger_tl": 7445,
+   "maas": 10.1
+  },
+  "2013": {
+   "usd": 4651,
+   "odenen": 6981,
+   "deger_tl": 8843,
+   "maas": 11.0
+  },
+  "2014": {
+   "usd": 5127,
+   "odenen": 8024,
+   "deger_tl": 11218,
+   "maas": 12.6
+  },
+  "2015": {
+   "usd": 5557,
+   "odenen": 9193,
+   "deger_tl": 15116,
+   "maas": 15.1
+  },
+  "2016": {
+   "usd": 6074,
+   "odenen": 10755,
+   "deger_tl": 18351,
+   "maas": 14.1
+  },
+  "2017": {
+   "usd": 6536,
+   "odenen": 12439,
+   "deger_tl": 23842,
+   "maas": 17.0
+  },
+  "2018": {
+   "usd": 6936,
+   "odenen": 14363,
+   "deger_tl": 33384,
+   "maas": 20.8
+  },
+  "2019": {
+   "usd": 7363,
+   "odenen": 16788,
+   "deger_tl": 41753,
+   "maas": 20.7
+  },
+  "2020": {
+   "usd": 7762,
+   "odenen": 19578,
+   "deger_tl": 54369,
+   "maas": 23.4
+  },
+  "2021": {
+   "usd": 8143,
+   "odenen": 22969,
+   "deger_tl": 72368,
+   "maas": 25.6
+  },
+  "2022": {
+   "usd": 8497,
+   "odenen": 28821,
+   "deger_tl": 140646,
+   "maas": 25.6
+  },
+  "2023": {
+   "usd": 9000,
+   "odenen": 40767,
+   "deger_tl": 213768,
+   "maas": 18.7
+  },
+  "2024": {
+   "usd": 9621,
+   "odenen": 61169,
+   "deger_tl": 315711,
+   "maas": 18.6
+  },
+  "2025": {
+   "usd": 10293,
+   "odenen": 87695,
+   "deger_tl": 406559,
+   "maas": 18.4
+  },
+  "2026": {
+   "usd": 10904,
+   "odenen": 115770,
+   "deger_tl": 501129,
+   "maas": 17.8
+  }
+ }
+}
