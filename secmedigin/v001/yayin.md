@@ -1,6 +1,8 @@
 # Video 001 – Yayın metinleri
 
 ## Başlık
+Güncel (31.10.2026 17:00 civarı değiştirildi, deneme): Dürüst Olalım: 2000'de Başlayan Bu Plan Kimi Zengin Yapardı?
+İlk yayın başlığı:
 Aynı Maaş, İki Yol: 26 Yıl Sonra Altında 73 Maaş, TL'de Kaç Maaş?
 (Yedek: Altın mı Kazandırdı, Maaş mı? 26 Yılın Gerçek Hesabı)
 
