@@ -39,7 +39,7 @@ function valAt(col, p) { const i0 = Math.min(N - 1, Math.floor(p)), fr = p - i0,
 
 function frame(t) {
   let o = `<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.bg2}"/><stop offset="1" stop-color="${C.bg}"/></linearGradient><filter id="gl"><feGaussianBlur stdDeviation="7"/></filter></defs>`;
-  o += `<rect width="${W}" height="${H}" fill="url(#bg)"/>` + T(540, 150, 30, 'THE ROAD NOT TAKEN', { c: C.mu, ls: 8, w: 600 });
+  o += `<rect width="${W}" height="${H}" fill="url(#bg)"/>` + T(540, 150, 30, 'THE OTHER PATH', { c: C.mu, ls: 8, w: 600 });
 
   // 1) kanca 0–6
   const k1 = 0;
