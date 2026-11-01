@@ -1,5 +1,5 @@
 import numpy as np, wave
-sr=44100; D=32.0; n=int(D*sr); t=np.arange(n)/sr; out=np.zeros(n)
+sr=44100; D=35.0; n=int(D*sr); t=np.arange(n)/sr; out=np.zeros(n)
 bpm=100; beat=60/bpm
 def add(sig,at,g=1.0):
     i=int(at*sr); j=min(n,i+len(sig))
@@ -21,7 +21,7 @@ for b in np.arange(4.6, 23.2, beat):
 for at in [1.4,1.75,2.1,2.45]: add(0.15*tone(0.12,1318.5,25),at)
 for i in range(27): add(0.10*tone(0.06,1200,50), 4.6+17.0*i/26)
 # vurgu: 135$ (4.0), son değer (21.5), karşılaştırma (24.0, 24.9)
-for at,f in [(21.6,1046.5),(24.0,987.8),(24.45,880),(24.9,784),(25.35,659.3),(29.6,1046.5)]: add(0.25*tone(0.9,f,4)+0.12*tone(0.9,f*2,6),at)
+for at,f in [(21.6,1046.5),(24.0,987.8),(24.45,880),(24.9,784),(25.35,659.3),(25.8,523.3),(29.6,1046.5),(32.3,523.3),(33.0,440)]: add(0.25*tone(0.9,f,4)+0.12*tone(0.9,f*2,6),at)
 # yükselen ses 20–21.5
 tt=np.arange(int(1.5*sr))/sr; add(0.06*np.random.default_rng(1).standard_normal(len(tt))*(tt/1.5)**2,20.1)
 fd=np.ones(n); fd[:int(0.3*sr)]=np.linspace(0,1,int(0.3*sr)); fd[-int(1.2*sr):]=np.linspace(1,0,int(1.2*sr)); out*=fd
