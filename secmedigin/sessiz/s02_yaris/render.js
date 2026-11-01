@@ -22,7 +22,7 @@ const S = [
   { k: 'Dolar', c: '#3ddc84', i: 3 },
 ];
 const N = ROWS.length;
-const X0 = 130, X1 = 820, Y0 = 1560, Y1 = 600, LMAX = Math.log10(1500);
+const X0 = 130, X1 = 740, Y0 = 1560, Y1 = 600, LMAX = Math.log10(1500);
 const px = i => X0 + (X1 - X0) * i / (N - 1);
 const py = v => Y0 - (Y0 - Y1) * Math.log10(Math.max(1, v)) / LMAX;
 const D0 = 4.6, D1 = 21.6;
@@ -46,7 +46,7 @@ function frame(t) {
   if (kg > 0) {
     const p = cl((t - D0) / (D1 - D0)) * (N - 1);
     const yr = p >= N - 1.01 ? 'Ekim 2026' : String(ROWS[Math.min(N - 1, Math.round(p))][0]);
-    let g = `<g opacity="${kg}">` + T(540, 300, 50, "2000'de hepsi 1× · bugün kaç kat?", { c: C.mu, w: 600 }) + T(540, 420, 92, yr);
+    let g = `<g opacity="${kg}">` + S.map((s, j) => { const x = [150, 410, 650, 820][j]; return `<circle cx="${x}" cy="497" r="12" fill="${s.c}"/>` + T(x + 22, 507, 30, s.k, { a: 'start', c: s.c, w: 600 }); }).join('') + T(540, 300, 50, "2000'de hepsi 1× · bugün kaç kat?", { c: C.mu, w: 600 }) + T(540, 420, 92, yr);
     for (const v of [1, 10, 100, 1000]) g += `<line x1="${X0}" y1="${py(v)}" x2="${X1}" y2="${py(v)}" stroke="${C.grid}" stroke-width="2"/>` + T(X0 - 14, py(v) + 10, 28, `${v.toLocaleString('tr-TR')}×`, { a: 'end', c: C.ax, w: 500 });
     for (const y of [2000, 2010, 2020]) g += T(px(y - 2000), Y0 + 52, 28, y, { c: C.ax, w: 500 });
     const ends = [];
@@ -61,10 +61,10 @@ function frame(t) {
     }
     // uç etiketleri: üst üste binmesin
     ends.sort((a, b) => a.y - b.y); let last = -1e9;
-    for (const e of ends) { e.ly = Math.max(e.y, last + 62); last = e.ly; }
+    for (const e of ends) { e.ly = Math.max(e.y - 20, last + 96); last = e.ly; }
     for (const e of ends) {
-      g += `<circle cx="${e.x}" cy="${e.y}" r="13" fill="${e.s.c}"/><line x1="${e.x + 14}" y1="${e.y}" x2="${e.x + 34}" y2="${e.ly}" stroke="${e.s.c}" stroke-width="3"/>`;
-      g += T(e.x + 42, e.ly + 16, 46, `${fmt(e.v)}×`, { a: 'start', c: e.s.c });
+      g += `<circle cx="${e.x}" cy="${e.y}" r="13" fill="${e.s.c}"/><line x1="${e.x + 14}" y1="${e.y}" x2="${e.x + 34}" y2="${e.ly + 14}" stroke="${e.s.c}" stroke-width="3"/>`;
+      g += T(e.x + 42, e.ly + 4, 30, e.s.k, { a: 'start', c: e.s.c, w: 600 }) + T(e.x + 42, e.ly + 50, 46, `${fmt(e.v)}×`, { a: 'start', c: e.s.c });
     }
     g += T(540, 1700, 26, '2000 yılı ortalaması = 1× · logaritmik ölçek', { c: C.ax, w: 500 });
     o += g + '</g>';
