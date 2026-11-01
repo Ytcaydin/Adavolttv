@@ -1,7 +1,7 @@
 // Global silent Short #01: "Doctor vs Plumber: Who Retires Richer?" (1080x1920)
 const sharp = require('/opt/npm-tools/node_modules/sharp');
 const { spawn } = require('child_process');
-const W = 1080, H = 1920, FPS = 30, DUR = 36;
+const W = 1080, H = 1920, FPS = 30, DUR = 32;
 const F = 'Poppins';
 const C = { bg: '#0a0f1f', bg2: '#121a33', mu: '#8a96b8', wh: '#f4f6fb', grid: '#26304f', ax: '#55608a', dr: '#4fc3ff', pl: '#ff9f43', rd: '#ff5a5a' };
 const cl = x => Math.max(0, Math.min(1, x));
@@ -16,7 +16,7 @@ const money = v => { const s = v < 0 ? '−' : ''; v = Math.abs(v); return s + (
 const ROWS = require('./data.json'); // [age, plumber, doctor(net), doctorDebt]
 const N = ROWS.length;
 const X0 = 150, X1 = 760, Y0 = 1480, Y1 = 640;
-const D0 = 6.4, D1 = 24.0;
+const D0 = 2.3, D1 = 19.9;
 
 // basit ikonlar
 const docIcon = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.dr}"/><rect x="${x - r * 0.14}" y="${y - r * 0.5}" width="${r * 0.28}" height="${r}" fill="#fff" rx="${r * 0.05}"/><rect x="${x - r * 0.5}" y="${y - r * 0.14}" width="${r}" height="${r * 0.28}" fill="#fff" rx="${r * 0.05}"/>`;
@@ -38,20 +38,19 @@ function frame(t) {
   o += `<rect width="${W}" height="${H}" fill="url(#bg)"/>` + T(540, 150, 30, 'THE ROAD NOT TAKEN', { c: C.mu, ls: 8, w: 600 });
 
   // 1) kanca 0–6
-  const k1 = vis(t, 0.1, 6.0);
+  const k1 = 1 - ease((t - 1.6) / 0.35);
   if (k1 > 0) {
-    const a = pop((t - 0.3) / 0.5), b = pop((t - 0.7) / 0.5), c = eOut((t - 1.6) / 0.5), d = eOut((t - 3.4) / 0.5);
+    const a = 1, b = 1, c = 1;
     o += `<g opacity="${k1}">`;
     o += `<g transform="translate(300 700) scale(${a}) translate(-300 -700)">${docIcon(300, 700, 110)}` + T(300, 880, 60, 'DOCTOR', { c: C.dr }) + '</g>';
     o += `<g transform="translate(780 700) scale(${b}) translate(-780 -700)">${plIcon(780, 700, 110)}` + T(780, 880, 60, 'PLUMBER', { c: C.pl }) + '</g>';
     o += T(540, 720, 54, 'vs', { c: C.mu });
     o += `<g opacity="${c}">` + T(540, 1080, 84, 'Who retires') + T(540, 1180, 84, 'richer?', { c: '#f5c542' }) + '</g>';
-    o += `<g opacity="${d}">` + T(540, 1360, 40, 'Both start at 18.', { c: C.mu, w: 600 }) + T(540, 1420, 40, 'Both invest 15% of their pay.', { c: C.mu, w: 600 }) + '</g>';
     o += '</g>';
   }
 
   // 2) yarış 6–25.6
-  const kg = vis(t, 6.0, 25.4);
+  const kg = vis(t, 1.75, 21.3, 0.3, 0.4);
   if (kg > 0) {
     const u = cl((t - D0) / (D1 - D0)), p = u < 0.6 ? u / 0.6 * 18 : 18 + (u - 0.6) / 0.4 * (N - 1 - 18);
     const age = Math.round(18 + p);
@@ -67,8 +66,12 @@ function frame(t) {
     // canlı skor tablosu
     g += `${docIcon(250, 535, 30)}` + T(295, 552, 46, money(vd), { a: 'start', c: C.dr }) + `${plIcon(620, 535, 30)}` + T(665, 552, 46, money(vp), { a: 'start', c: C.pl });
     // ızgara: 0 çizgisi + birkaç seviye
-    const step = [50e3, 100e3, 250e3, 500e3, 1e6, 2e6][[50e3, 100e3, 250e3, 500e3, 1e6, 2e6].findIndex(s => (mx - mn) / s <= 5)] || 2e6;
-    for (let v = Math.ceil(mn / step) * step; v <= mx; v += step) g += `<line x1="${X0}" y1="${py(v)}" x2="${X1}" y2="${py(v)}" stroke="${v === 0 ? '#3d4a75' : C.grid}" stroke-width="${v === 0 ? 3 : 2}"/>` + T(X0 - 12, py(v) + 9, 26, money(v), { a: 'end', c: C.ax, w: 500 });
+    const STEPS = [50e3, 100e3, 250e3, 500e3, 1e6, 2e6];
+    const stepOf = q => { let a = 150000, b = -60000; for (let i = 0; i <= Math.min(N - 1, Math.ceil(q)); i++) { a = Math.max(a, ROWS[i][1], ROWS[i][2]); b = Math.min(b, ROWS[i][2]); } a = Math.max(a, valAt(1, q), valAt(2, q)) * 1.18; b *= 1.25; return STEPS[STEPS.findIndex(s => (a - b) / s <= 5)] || 2e6; };
+    const pOf = tt => { const uu = cl((tt - D0) / (D1 - D0)); return uu < 0.6 ? uu / 0.6 * 18 : 18 + (uu - 0.6) / 0.4 * (N - 1 - 18); };
+    const step = stepOf(p);
+    let flash = 0; for (let dt = 0; dt <= 0.7; dt += 1 / FPS) if (stepOf(pOf(t - dt)) !== step) { flash = 1 - dt / 0.7; break; }
+    for (let v = Math.ceil(mn / step) * step; v <= mx; v += step) g += `<line x1="${X0}" y1="${py(v)}" x2="${X1}" y2="${py(v)}" stroke="${v === 0 ? '#3d4a75' : C.grid}" stroke-width="${v === 0 ? 3 : 2}"/>` + T(X0 - 12, py(v) + 9, 26 + 6 * flash, money(v), { a: 'end', c: flash > 0 ? '#f5c542' : C.ax, w: flash > 0 ? 700 : 500 });
     for (const a of [18, 30, 40, 50, 65]) g += T(px(a - 18), Y0 + 50, 28, a, { c: C.ax, w: 500 });
     for (const [col, c] of [[1, C.pl], [2, C.dr]]) {
       const pts = []; const i0 = Math.floor(p);
@@ -87,28 +90,25 @@ function frame(t) {
       const col = ev[1] === 'dr' ? C.dr : C.pl, y = 700 + j * 120, bw = 250;
       g += `<g opacity="${a}"><rect x="${X1 + 30}" y="${y}" width="${bw}" height="96" rx="20" fill="${col}" fill-opacity="0.16" stroke="${col}" stroke-width="3"/>` + T(X1 + 30 + bw / 2, y + 38, 24, `${ev[1] === 'dr' ? 'DOCTOR' : 'PLUMBER'} · ${ev[0]}`, { c: col, w: 600 }) + T(X1 + 30 + bw / 2, y + 76, ev[2].length > 13 ? 26 : 30, ev[2], { c: C.wh }) + '</g>';
     });
-    g += T(540, 1640, 26, "Today's dollars · 15% of pay invested at 5%/yr after inflation", { c: C.ax, w: 500 });
-    o += g + '</g>';
+        o += g + '</g>';
   }
 
   // 3) sonuç 25.6–31
-  const k3 = vis(t, 25.6, 30.8);
+  const k3 = vis(t, 21.5, 26.7);
   if (k3 > 0) {
-    const a = pop((t - 25.9) / 0.4), b = pop((t - 26.5) / 0.4), c = eOut((t - 27.6) / 0.5);
+    const a = pop((t - 21.8) / 0.4), b = pop((t - 22.4) / 0.4), c = eOut((t - 23.5) / 0.5);
     const L = ROWS[N - 1];
     o += `<g opacity="${k3}">` + T(540, 450, 54, 'At 65', { c: C.mu, w: 600 });
     o += `<g transform="translate(540 680) scale(${a}) translate(-540 -680)">${docIcon(250, 660, 60)}` + T(350, 690, 110, money(L[2]), { a: 'start', c: C.dr }) + '</g>';
-    o += `<g transform="translate(540 880) scale(${b}) translate(-540 -880)">${plIcon(250, 860, 60)}` + T(350, 890, 110, money(L[1]), { a: 'start', c: C.pl }) + '</g>';
+    o += `<g transform="translate(540 880) scale(${b}) translate(-540 -880)">${plIcon(250, 860, 60)}` + T(350, 890, 110, money(L[1]), { a: 'start', c: C.pl }) + '</g>' + T(540, 990, 28, "pre-tax · today's dollars", { c: C.ax, w: 500 });
     o += `<g opacity="${c}">` + T(540, 1110, 60, 'But the plumber', { c: C.wh }) + T(540, 1200, 60, 'was ahead for 16 years.', { c: C.pl }) + '</g></g>';
   }
 
   // 4) soru 31–36
-  const k4 = vis(t, 31.0, 99);
-  if (k4 > 0) o += `<g opacity="${k4}">` + T(540, 860, 84, 'Which path') + T(540, 970, 84, 'would you take?', { c: '#f5c542' }) + docIcon(420, 1120, 46) + T(540, 1137, 44, 'or', { c: C.mu, w: 600 }) + plIcon(660, 1120, 46) + T(540, 1260, 48, 'Comment below ↓', { c: C.mu, w: 600 }) + '</g>';
+  const k4 = vis(t, 26.9, 99);
+  if (k4 > 0) o += `<g opacity="${k4}">${docIcon(300, 700, 110)}` + T(300, 880, 60, 'DOCTOR', { c: C.dr }) + plIcon(780, 700, 110) + T(780, 880, 60, 'PLUMBER', { c: C.pl }) + T(540, 720, 54, 'vs', { c: C.mu }) + T(540, 1080, 84, 'Which path') + T(540, 1180, 84, 'would you take?', { c: '#f5c542' }) + T(540, 1330, 46, 'Comment below ↓', { c: C.mu, w: 600 }) + '</g>';
 
-  o += T(540, 1775, 22, 'Sources: BLS OEWS May 2025 (median pay) · AAMC 2025 (resident pay)', { c: '#44507a', w: 500 }) + T(540, 1808, 22, 'Avg. med-school debt, class of 2025 (educationdata.org) · Pre-tax', { c: '#44507a', w: 500 });
-  const fade = Math.max(1 - cl(t / 0.25), cl((t - (DUR - 0.25)) / 0.25));
-  if (fade > 0) o += `<rect width="${W}" height="${H}" fill="#000" opacity="${fade}"/>`;
+  o += T(540, 1745, 22, "Both start at 18 · 15% of pre-tax pay invested at 5%/yr after inflation · today's dollars", { c: '#44507a', w: 500 }) + T(540, 1778, 22, 'Sources: BLS OEWS May 2025 (median pay) · AAMC 2025 (resident pay)', { c: '#44507a', w: 500 }) + T(540, 1811, 22, 'Avg. med-school debt, class of 2025 (educationdata.org)', { c: '#44507a', w: 500 });
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">${o}</svg>`;
 }
 
