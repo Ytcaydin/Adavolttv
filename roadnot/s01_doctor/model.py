@@ -16,12 +16,14 @@ for age in range(18,66):
     else: inc_d=MD
     if age==26: debt=DEBT
     debt*= (1+LR) if debt>0 else 1
-    md = md*(1+R) + SAVE*inc_d
+    # ikisi de gelirin %15'ini geleceğe ayırır: doktor önce borcu kapatır, sonra yatırır
+    budget = SAVE*inc_d
     if age>=29 and debt>0:
-        pay=min(debt, 0.15*inc_d); debt-=pay
+        pay=min(debt, budget); debt-=pay; budget-=pay
+    md = md*(1+R) + budget
     rows.append([age, round(pl), round(md-debt), round(debt)])
 cross=next(a for a,p,d,_ in rows if a>26 and d>p)
 json.dump(rows,open('data.json','w'))
 for r in rows:
     if r[0] in (18,22,26,29,30,35,cross-1,cross,40,45,50,55,60,65): print(r)
-print('cross',cross, 'debt paid age', next(a for a,_,_,db in rows if a>29 and db==0))
+print('cross',cross, 'p100k', next(a for a,p,_,_ in rows if p>=100000), 'p250k', next(a for a,p,_,_ in rows if p>=250000), 'debt paid age', next(a for a,_,_,db in rows if a>29 and db==0))
