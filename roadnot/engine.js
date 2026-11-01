@@ -100,7 +100,7 @@ function frame(t) {
   const k4 = vis(t, Q0, 99);
   if (k4 > 0) o += `<g opacity="${k4}">${ic('A', 300, 700, 110)}` + T(300, 880, 60, CFG.A.name, { c: CFG.A.color }) + ic('B', 780, 700, 110) + T(780, 880, 60, CFG.B.name, { c: CFG.B.color }) + T(540, 720, 54, 'vs', { c: C.mu }) + T(540, 1080, 84, CFG.question[0]) + T(540, 1180, 84, CFG.question[1], { c: C.au }) + T(540, 1330, 46, 'Comment below ↓', { c: C.mu, w: 600 }) + '</g>';
 
-  o += `<g opacity="${ease((t - 2.4) / 0.4)}">` + CFG.footer.map((l, i) => T(540, 1745 + i * 27, 21, l, { c: '#44507a', w: 500 })).join('') + '</g>';
+  o += `<g opacity="${ease((t - 2.4) / 0.4)}">` + CFG.footer.map((l, i) => T(540, 1735 + i * 27, 21, l, { c: '#44507a', w: 500 })).join('') + '</g>';
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">${o}</svg>`;
 }
 module.exports = { frame, tOf, DUR, RES0, Q0 };

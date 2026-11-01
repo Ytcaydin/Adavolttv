@@ -1,0 +1,32 @@
+const rows = require('./data.json').map(([a, owner, renter]) => [a, renter, owner]);
+module.exports = {
+  out: 'rentbuy',
+  dur: 30,
+  raceEnd: 17.8,
+  rows,
+  A: { name: 'RENTER', color: '#4fc3ff', icon: 'rent' },
+  B: { name: 'BUYER', color: '#ff9f43', icon: 'house' },
+  hook: 'Same budget. 30 years.',
+  counterLabel: 'Net worth at age',
+  xTicks: [30, 40, 50, 60],
+  minMax: 100000, minMin: 0,
+  events: [
+    [30, 'B', 'Buys a $344K home'],
+    [30, 'A', 'Invests the $79K'],
+    [31, 'A', 'Invests $1,060/mo'],
+    [40, 'A', '$261K invested'],
+    [45, 'B', '$243K equity'],
+    [60, 'B', 'Mortgage paid off'],
+  ],
+  resultLabel: 'At 60',
+  resultNote: "today's dollars · home sold minus 6% fees",
+  twist: ['Only if the renter', 'invests the difference.'],
+  twistColor: '#f5c542',
+  question: ['Rent or buy?', 'What would you do?'],
+  footer: [
+    "Median asking price $344K, rent $1,531/mo (Census HVS Q2 2026)",
+    "30-yr fixed 7.24% (Freddie Mac, Oct 29 2026) · 20% down + 3% closing",
+    "Tax/insurance/upkeep 2.5%/yr · home +1%/yr, investments +5%/yr after inflation",
+    "Cheaper side invests the difference · today's dollars · not financial advice",
+  ],
+};
