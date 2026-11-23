@@ -2,3 +2,7 @@ node_modules/
 k2/
 seg*/
 *.tmp
+roadnot/*/*_v.mp4
+roadnot/*/muzik.wav
+roadnot/*/cues.json
+roadnot/*/*_pv_*.png
